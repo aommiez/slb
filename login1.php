@@ -1,5 +1,8 @@
 <?php
 session_start();
+?>
+
+<?php
 if (isset($_POST['login']) && isset($_POST['password'])){
     $username = strtolower($_POST['login']);
     $user = preg_replace( '/dir(\/|\\\\)/', '', $username );
@@ -63,14 +66,17 @@ if (isset($_POST['login']) && isset($_POST['password'])){
                 if(!$error){
                     $_SESSION['login'] = 1;
                     $_SESSION['user_id'] = $user;
-                    echo '<script type="text/javascript">window.location.href="home.php"</script>';
+                    exit(999);
+                    //echo '<script type="text/javascript">window.location.href="home.php"</script>';
                     //echo "hello " . $_SESSION['user_id'];
                 }
                 else{
+                    /*
                     unset($_SESSION['user_id']);
                     setcookie('login', '', 0, "/");
                     setcookie('password', '', 0, "/");
-                    exit("error ldap_bind");
+                    */
+                    exit(1);
                 }
             }
                 else{
@@ -81,7 +87,7 @@ if (isset($_POST['login']) && isset($_POST['password'])){
             exit("error Exception");
         }
     } else {
-        echo " user is not in SLB.xml";
+        exit(0);
     }
 }
 

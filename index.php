@@ -10,10 +10,30 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <meta http-equiv="content-Type" content="text/html" charset="utf-8">
     <meta name="viewport" content="width=940,  maximum-scale=2">
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
-
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <title>interchange bangkok 2013</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#loginClick").click(function(e){
+                e.preventDefault();
+                $.post("login1.php", { login: $("#loginName").val() , password: $("#loginPass").val()  }
+                    ,function(data) {
+                        if (data == 0) {
+                            alert("This website is restricted for InterChange participant only. \n Please contact interchangebkk@slb.com to request for the access. ");
+                        } else if ( data == 1 ) {
+                            alert('Incorrect password');
+                        } else if ( data == 999 ) {
+                            window.location.href="home.php";
+                        }
+                    });
+            });
+
+        });
+    </script>
+    <title>Interchange Bangkok 2013</title>
 
     <style type="text/css">
         heml, body {
@@ -66,11 +86,11 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <header class="text-center">
         <img src="images/Login/Logo345x247.png">
     </header>
-    <form method="post" style="text-align: center; margin-top: 38px;" action="login1.php">
+    <form  style="text-align: center; margin-top: 38px;"  >
         <div></div>
-        <input type="text" name="login"><br />
-        <input type="password" name="password"><br />
-        <button type="submit" class="login-button"></button>
+        <input type="text" name="login" id="loginName"><br />
+        <input type="password" name="password" id="loginPass"><br />
+        <button id="loginClick" class="login-button"></button>
         <p style="margin-top: 36px;">
         <img src="images/Login/day57x179.png">
         </p>

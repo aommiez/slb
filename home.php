@@ -1,8 +1,9 @@
 <?php
+/*
 session_start();
 if ($_SESSION['login'] != 1 ) {
     echo '<script type="text/javascript">window.location.href="index.php"</script>';
-}
+}*/
 $page = isset($_GET['page'])? $_GET['page']: 'home';
 ?>
 <!DOCTYPE html>
@@ -10,6 +11,9 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
 <head>
     <meta http-equiv="content-Type" content="text/html" charset="utf-8">
     <meta name="viewport" content="width=940,  maximum-scale=2">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -19,6 +23,7 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
     <link rel="stylesheet" media="screen" href="css/style-ie.css">
     <!-->
     <title>Interchange Bangkok 2013</title>
+
 </head>
 <body>
 <div class="main-wrap">
