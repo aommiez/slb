@@ -83,9 +83,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 </head>
 <body>
 <div class="wrap">
-    <header class="text-center">
+    <div style="text-align: center;">
         <img src="images/Login/Logo345x247.png">
-    </header>
+    </div>
     <form  style="text-align: center; margin-top: 38px;"  >
         <div></div>
         <input type="text" name="login" id="loginName"><br />
