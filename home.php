@@ -10,7 +10,7 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
 <html lang="th">
 <head>
     <meta http-equiv="content-Type" content="text/html" charset="utf-8">
-    <meta name="viewport" content="width=940,  maximum-scale=2">
+    <meta name="viewport" content="width=1208,  maximum-scale=2">
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
