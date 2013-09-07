@@ -91,15 +91,23 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         <input type="text" name="login" id="loginName"><br />
         <input type="password" name="password" id="loginPass"><br />
         <button id="loginClick" class="login-button"></button>
-        <p style="margin-top: 36px;">
-        <img src="images/Login/day57x179.png">
+        <p style="margin-top: 36px; color: rgb(239,228,198);" class="count-down">
+
         </p>
     </form>
     <footer class="page-footer">
         <a href="mailto:interchangebkk@slb.com?Subject=Hello" target="_top" style="position: absolute;bottom: 10px; right: 180px; display: none;">
             interchangebkk@slb.com</a>
-
     </footer>
 </div>
+<script type="text/javascript" src="js/jquery.countdown/jquery.countdown.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var liftoffTime = new Date('1-1-2014');
+    $('.count-down').countdown({until: liftoffTime, compact: true,
+        layout: 'COUNT DOWN TO THE EVENT DAY<br /><b>{dn}<br />DAY</b>',
+        description: 'to wait'});
+});
+</script>
 </body>
 </html>
