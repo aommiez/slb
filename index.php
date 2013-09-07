@@ -8,6 +8,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <html lang="th">
 <head>
     <meta http-equiv="content-Type" content="text/html" charset="utf-8">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
     <meta name="viewport" content="width=1208,  maximum-scale=2">
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
     <!--[if lt IE 9]>
