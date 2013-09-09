@@ -24,6 +24,11 @@
 .section-geo {
     margin: 24px auto;
 }
+
+p {
+    text-align:justify;
+    text-justify:inter-word;
+}
 </style>
 <div>
     <div class="relative-block">

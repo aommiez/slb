@@ -49,15 +49,25 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
             <div class="clearfix"></div>
         </div>
         <div class="container" style="position: relative; z-index: 2;">
-            <div class="wrap">
+            <div class="wrap" style="position: relative; z-index: 2;">
                 <?php include('pages/'.$page.'.php');?>
             </div>
 
-            <div class="page-footer">
+            <svg class="page-footer">
 
-            </div>
+            </svg>
         </div>
 
+        <a href="mailto:interchangebkk@slb.com?Subject=Hello" style="
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        opacity: 0;
+        z-index: 3;
+    ">
+            interchangebkk@slb.com
+        </a>
         <div class="bg-wrap" style="width: 100%; overflow: hidden;">
             <img src="images/Template/Contener935x1080.png">
         </div>
