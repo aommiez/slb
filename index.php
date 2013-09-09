@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             text-shadow: rgba(0,49,24,0.4) 0px 0px 1px;
         }
 
-        footer {
+        div.page-footer {
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -98,18 +98,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     </form>
     <a href="mailto:interchangebkk@slb.com?Subject=Hello" style="
         display: block;
+        width: 140px;
+        height: 20px;
         position: absolute;
         bottom: 20px;
         right: -175px;
-        opacity: 1;
         z-index: 3;
         opacity: 0;
-    ">
-        interchangebkk@slb.com
-    </a>
-    <footer class="page-footer">
-
-    </footer>
+    "></a>
+    <div class="page-footer">
+    </div>
 </div>
 <script type="text/javascript" src="js/jquery.countdown/jquery.countdown.min.js"></script>
 <script type="text/javascript">

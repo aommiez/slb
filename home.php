@@ -53,9 +53,9 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
                 <?php include('pages/'.$page.'.php');?>
             </div>
 
-            <svg class="page-footer">
+            <div class="page-footer">
 
-            </svg>
+            </div>
         </div>
 
         <a href="mailto:interchangebkk@slb.com?Subject=Hello" style="
@@ -65,8 +65,9 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
         right: 0;
         opacity: 0;
         z-index: 3;
+        width: 140px;
+        height: 20px;
     ">
-            interchangebkk@slb.com
         </a>
         <div class="bg-wrap" style="width: 100%; overflow: hidden;">
             <img src="images/Template/Contener935x1080.png">
