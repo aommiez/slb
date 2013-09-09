@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
 <script type="text/javascript">
 alert('Register success.');
-//window.location.href = 'home.php';
+window.location.href = 'home.php';
 </script>
 HTML;
         /*
