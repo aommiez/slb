@@ -78,7 +78,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         <p style="margin-top: 36px; color: rgb(239,228,198);" class="count-down">
             COUNT DOWN TO THE EVENT DAY<br /><b>
             <?php
-            $target = strtotime('2013-09-09 '.date('H:i:s', time()));
+            $target = strtotime('2013-12-02 '.date('H:i:s', time()));
             $now = time();
             $dif = $target-$now;
             $day = (int)($dif/(60*60*24));
