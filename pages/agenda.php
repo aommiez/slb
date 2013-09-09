@@ -325,12 +325,10 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
         <td>08.00 – 08.15 (0.15)</td>
         <td>Day Overview</td>
         <td rowspan="2">Ballroom</td>
-        <td></td>
     </tr>
     <tr>
         <td>08.15 – 10.15 (2.00)</td>
         <td>Workshop Presentations</td>
-        <td></td>
     </tr>
     <tr>
         <td>10.15 – 10.30 (0.15)</td>
