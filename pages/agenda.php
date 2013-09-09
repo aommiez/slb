@@ -77,19 +77,19 @@
 
     <tr>
         <td>08.00 – 16.00 (8.00)</td>
-        <td>Event Registration</td>
+        <td>Registration</td>
         <td>Registration Area</td>
         <td rowspan="2"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
-        <td>16.00 – 18.00 (2.00)</td>
+        <td>16.00 – 19.00 (3.00)</td>
         <td>Workshop Preparation Wrap Up</td>
-        <td></td>
+        <td>Breakout Rooms</td>
     </tr>
 
     <tr>
-        <td>18.00 – 19.00 (1.00)</td>
-        <td>Team Building #1</td>
+        <td>19.00 – 22.00 (3.00)</td>
+        <td>Welcome Cocktail</td>
         <td>Garden</td>
         <td rowspan="2">
             <span class="pull-left">Smart Casual<br />
@@ -98,8 +98,8 @@
         </td>
     </tr>
     <tr>
-        <td>19.00 – 23.00 (4.00)</td>
-        <td>Welcome Cocktail</td>
+        <td>19.30 – 20.30 (1.00)</td>
+        <td>Team Building #1</td>
         <td>Garden</td>
     </tr>
 </table>
@@ -117,7 +117,7 @@
 
     <tr>
         <td>06.00 – 07.00 (1.00)</td>
-        <td>Optional Morning Activity</td>
+        <td>Morning Activity (optional)</td>
         <td>Defined Areas</td>
         <td>
             <span class="pull-left">Sportswear</span>
@@ -127,14 +127,13 @@
     <tr>
         <td>07.00 – 08.00 (1.00)</td>
         <td>Breakfast</td>
-        <td></td>
-        <td></td>
+        <td>Hotel Restaurant</td>
+        <td rowspan="4"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
         <td>08.00 – 08.45 (0.45)</td>
         <td>Opening Ceremony</td>
         <td rowspan="3">Ballroom</td>
-        <td rowspan="8"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
         <td>08.45 – 09.30 (0.45)</td>
@@ -148,11 +147,13 @@
         <td>10.15 – 10.30 (0.15)</td>
         <td>Coffee Break</td>
         <td>Break Area</td>
+        <td></td>
     </tr>
     <tr>
         <td>10.30 – 11.30 (1.00)</td>
         <td>Panel Discussion #1</td>
         <td rowspan="2">Ballroom</td>
+        <td rowspan="4"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
         <td>11.30 – 12.15 (0.45)</td>
@@ -161,7 +162,7 @@
     <tr>
         <td>12.15 – 13.15 (1.00)</td>
         <td>Lunch</td>
-        <td></td>
+        <td>Hotel Restaurant</td>
     </tr>
     <tr>
         <td>13.15 – 14.00 (0.45)</td>
@@ -174,10 +175,7 @@
         <td>Meet in Lobby</td>
         <td>
             <span class="pull-left"><b>Polo shirt with pants<br />
-and sneakers.</b><br />
-Short pants, skirts,<br />
-vest and strapless<br />
-are not allowed</span>
+and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
             <span class="pull-right text-center">
                 <p>
                     <img src="images/Agenda/shirt4_24x26.png">
@@ -188,7 +186,7 @@ are not allowed</span>
         </td>
     </tr>
     <tr>
-        <td>19.00 – 19.20 (0.20)</td>
+        <td>19.00 – 19.50 (0.50)</td>
         <td>Fresh Up</td>
         <td>Private Room</td>
         <td rowspan="3">
@@ -201,7 +199,7 @@ are not allowed</span>
         </td>
     </tr>
     <tr>
-        <td>19.20 – 23.30 (4.10)</td>
+        <td>19.50 – 23.30 (3.40)</td>
         <td>Dinner Party</td>
         <td>Meet in Lobby</td>
     </tr>
@@ -223,7 +221,7 @@ are not allowed</span>
     </tr>
     <tr>
         <td>06.00 – 07.00 (1.00)</td>
-        <td>Optional Morning Activity</td>
+        <td>Morning Activity (optional)</td>
         <td>Defined Areas</td>
         <td>
             <span class="pull-left">Sportswear</span>
@@ -233,14 +231,13 @@ are not allowed</span>
     <tr>
         <td>07.00 – 08.00 (1.00)</td>
         <td>Breakfast</td>
-        <td></td>
-        <td></td>
+        <td>Hotel Restaurant</td>
+        <td rowspan="9"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
         <td>08.00 – 08.15 (0.15)</td>
         <td>Day Overview</td>
         <td rowspan="2">Ballroom</td>
-        <td rowspan="8"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
         <td>08.15 – 09.00 (0.45)</td>
@@ -248,13 +245,13 @@ are not allowed</span>
     </tr>
     <tr>
         <td>09.00 – 11.45 (2.45)</td>
-        <td>Technology Exhibitions  + Coffee Break</td>
-        <td></td>
+        <td>Technology Exhibitions</td>
+        <td>Functions room</td>
     </tr>
     <tr>
         <td>11.45 – 12.45 (1.00)</td>
         <td>Lunch</td>
-        <td></td>
+        <td>Restaurant</td>
     </tr>
     <tr>
         <td>12.45 – 13.45 (1.00)</td>
@@ -277,7 +274,7 @@ are not allowed</span>
     </tr>
     <tr>
         <td>17.30 – 18.00 (0.30)</td>
-        <td>Self Preparation</td>
+        <td>Fresh Up</td>
         <td>Private Room</td>
         <td rowspan="2">
             <span class="pull-left">Casual Dress</span>
@@ -311,7 +308,7 @@ are not allowed</span>
     </tr>
     <tr>
         <td>06.00 – 07.00 (1.00)</td>
-        <td>Optional Morning Activity</td>
+        <td>Morning Activity (optional)</td>
         <td>Defined Areas</td>
         <td>
             <span class="pull-left">Sportswear</span>
@@ -321,19 +318,18 @@ are not allowed</span>
     <tr>
         <td>07.00 – 08.00 (1.00)</td>
         <td>Breakfast</td>
-        <td></td>
-        <td></td>
+        <td>Hotel Restaurant</td>
+        <td rowspan="12"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
         <td>08.00 – 08.15 (0.15)</td>
         <td>Day Overview</td>
-        <td>Ballroom</td>
-        <td rowspan="11"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
+        <td rowspan="2">Ballroom</td>
+        <td></td>
     </tr>
     <tr>
         <td>08.15 – 10.15 (2.00)</td>
-        <td>Workshop Presentations<br />
-            (4Groups x 30Mins.)</td>
+        <td>Workshop Presentations</td>
         <td></td>
     </tr>
     <tr>
@@ -343,7 +339,7 @@ are not allowed</span>
     </tr>
     <tr>
         <td>10.30 – 11.15 (0.45)</td>
-        <td>Guest of Honor (???)</td>
+        <td>External Speaker</td>
         <td rowspan="2">Ballroom</td>
     </tr>
     <tr>
@@ -353,11 +349,11 @@ are not allowed</span>
     <tr>
         <td>12.00 – 13.00 (1.00)</td>
         <td>Lunch</td>
-        <td></td>
+        <td>Hotel Restaurant</td>
     </tr>
     <tr>
         <td>13.00 – 14.00 (1.00)</td>
-        <td>Panel Discussion #3 (Clients)</td>
+        <td>Panel Discussion #3</td>
         <td>Ballroom</td>
     </tr>
     <tr>
@@ -372,7 +368,7 @@ are not allowed</span>
     </tr>
     <tr>
         <td>14.30 – 15.30 (1.00)</td>
-        <td>Paal Keynote Speech / Round Table</td>
+        <td>CEO Keynote Speech / Round Table</td>
     </tr>
     <tr>
         <td>15.30 – 16.00 (0.30)</td>
