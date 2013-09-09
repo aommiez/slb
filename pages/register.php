@@ -1,8 +1,7 @@
 <?php
-
-
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
+    include('phpmailer/class.phpmailer.php');
     $pdo = new PDO('mysql:host=127.0.0.1;dbname=slb', 'root', '');
     $st = $pdo->prepare("INSERT INTO registers(
                 first_name,
@@ -134,6 +133,36 @@ alert('Register success.');
 window.location.href = 'home.php';
 </script>
 HTML;
+        /*
+         * SMTP
+====
+Server: nl0230exchub.mail.slb.com
+Port: 587
+Encryption: TLS
+Username: interchangebkk
+Password: ติดต่อผมโดยตรง
+         */
+        $mail = new PHPMailer();
+        $mail->IsSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'nl0230exchub.mail.slb.com';  // Specify main and backup server
+        $mail->Port = 587;
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'interchangebkk';                            // SMTP username
+        $mail->Password = '';                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
+
+        $mail->From = 'slb@service.com';
+        $mail->FromName = 'slb';
+        $mail->AddAddress($_POST['email_address'], $_POST['first_name']);  // Add a recipient
+        $mail->AddCC('interchangebkk@slb.com');
+
+        $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
+        $mail->IsHTML(true);                                  // Set email format to HTML
+
+        $mail->Subject = 'Thank you for register';
+        $mail->Body    = 'Thank you for register';
+        $mail->AltBody = 'Thank you for register';
+
         exit();
 
     } catch(Exception $e) {
