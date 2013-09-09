@@ -10,6 +10,7 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
 <html lang="th">
 <head>
     <meta http-equiv="content-Type" content="text/html" charset="utf-8">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
     <meta name="viewport" content="width=1208,  maximum-scale=2">
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -40,9 +41,9 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
                     <a href="home.php" class="<?php if($page=='home') echo 'active';?>">Home</a>
                     <a href="home.php?page=meeting_info" class="<?php if($page=='meeting_info') echo 'active';?>">Meeting Info</a>
                     <a href="home.php?page=agenda" class="<?php if($page=='agenda') echo 'active';?>">Agenda</a>
-                    <a href="home.php?page=explore_thailand" class="<?php if($page=='explore_thailand') echo 'active';?>">Explore Thailand</a>
-                    <a href="home.php?page=who_is_coming" class="<?php if($page=='who_is_coming') echo 'active';?>">Who's coming?</a>
-                    <a href="home.php?page=gallery" class="<?php if($page=='gallery') echo 'active';?>">Gallery</a>
+                    <a href="#home.php?page=explore_thailand" class="<?php if($page=='explore_thailand') echo 'active';?>">Explore Thailand</a>
+                    <a href="#home.php?page=who_is_coming" class="<?php if($page=='who_is_coming') echo 'active';?>">Who's coming?</a>
+                    <a href="#home.php?page=gallery" class="<?php if($page=='gallery') echo 'active';?>">Gallery</a>
                 </div>
             </div>
             <div class="clearfix"></div>
