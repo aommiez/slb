@@ -1,5 +1,4 @@
-<?php
-/*
+<?php/*
 session_start();
 if ($_SESSION['login'] != 1 ) {
     echo '<script type="text/javascript">window.location.href="index.php"</script>';
