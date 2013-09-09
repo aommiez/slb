@@ -2,102 +2,33 @@
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
     include('phpmailer/class.phpmailer.php');
-    $pdo = new PDO('mysql:host=127.0.0.1;dbname=slb', 'root', '');
-    $st = $pdo->prepare("INSERT INTO registers(
-                first_name,
-                gender,
-                nationality,
-                mobile_phone_number,
-                contry_of_assignment,
-                last_name,
-                gin_number,
-                email_address,
-                segment,
-                passport_first_name,
-                date_of_birth,
-                contry_of_issue,
-                date_of_expiration,
-                arrival_airline,
-                departure_date_and_time,
-                departure_flight_number,
-                check_in_date,
-                upload_passport_scan,
-                travel_with_family,
-                passport_last_name,
-                passport_number,
-                date_of_issue,
-                arrival_date_and_time,
-                arrival_flight_number,
-                departure_airline,
-                check_out_date,
-                family_details,
-                preferred_photo,
-                preferred_photo2,
-                special_requirement,
-                weight,
-                height,
-                body_size,
-                favorite_color,
-                health_condition,
-                food_restriction,
-                smoke,
-                fill_ requirement,
-                waistline_size,
-                size_details
-                )
-            VALUES(
-                :first_name,
-                :gender,
-                :nationality,
-                :mobile_phone_number,
-                :contry_of_assignment,
-                :last_name,
-                :gin_number,
-                :email_address,
-                :segment,
-                :passport_first_name,
-                :date_of_birth,
-                :contry_of_issue,
-                :date_of_expiration,
-                :arrival_airline,
-                :departure_date_and_time,
-                :departure_flight_number,
-                :check_in_date,
-                :upload_passport_scan,
-                :travel_with_family,
-                :passport_last_name,
-                :passport_number,
-                :date_of_issue,
-                :arrival_date_and_time,
-                :arrival_flight_number,
-                :departure_airline,
-                :check_out_date,
-                :family_details,
-                :preferred_photo,
-                :preferred_photo2,
-                :special_requirement,
-                :weight,
-                :height,
-                :body_size,
-                :favorite_color,
-                :health_condition,
-                :food_restriction,
-                :smoke,
-                :fill_ requirement,
-                :waistline_size,
-                :size_details
-            )");
+    $pdo = new PDO('mysql:host=127.0.0.1;dbname=slb', 'root', '123456');
 
     $pdo->beginTransaction();
     $variables = $_POST;
     $variables['preferred_photo']='';
-    $variables['preferred_photo2']='';
     $variables['upload_passport_scan']='';
 
+    $keys = array();
+    $values = array();
+    foreach($variables as $key => $value){
+        $keys[] = $key;
+        $values[] = "'".$value."'";
+    }
+
+    $query = 'INSERT INTO registers('.implode(',', $keys).') VALUES('.implode(',', $values).')';
+    $st = $pdo->prepare($query);
+
     try{
-        $st->execute($variables);
+        $a = $st->execute($variables);
+
+        /*
+        if(!$a)
+            var_dump($st->errorInfo());
+        */
 
         $id = $pdo->lastInsertId();
+
         if(isset($_FILES['preferred_photo'])){
             $pathinfo = pathinfo($_FILES['preferred_photo']);
             if($pathinfo['extension']!='jpg' && $pathinfo['extension']!='jpeg' && $pathinfo['extension']!='png' && $pathinfo['extension']!='gif'){
@@ -106,15 +37,6 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             $preferred_photo = 'preferred_photo/'.$id.'.'.$pathinfo['extension'];
             move_uploaded_file($_FILES['preferred_photo']['tmp_name'], $preferred_photo);
             $pdo->query("UPDATE registers SET preferred_photo='{$preferred_photo}' WHERE id='{$id}'");
-        }
-        if(isset($_FILES['preferred_photo2'])){
-            $pathinfo = pathinfo($_FILES['preferred_photo2']);
-            if($pathinfo['extension']!='jpg' && $pathinfo['extension']!='jpeg' && $pathinfo['extension']!='png' && $pathinfo['extension']!='gif'){
-                throw new Exception('You can upload file jpg,jpeg,png,gif');
-            }
-            $preferred_photo2 = 'preferred_photo/'.$id.'_2.'.$pathinfo['extension'];
-            move_uploaded_file($_FILES['preferred_photo2']['tmp_name'], $preferred_photo2);
-            $pdo->query("UPDATE registers SET preferred_photo2='{$preferred_photo2}' WHERE id='{$id}'");
         }
         if(isset($_FILES['upload_passport_scan'])){
             $pathinfo = pathinfo($_FILES['upload_passport_scan']);
@@ -126,11 +48,12 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             $pdo->query("UPDATE registers SET upload_passport_scan='{$upload_passport_scan}' WHERE id='{$id}'");
         }
         $pdo->commit();
+
         echo <<<HTML
 
 <script type="text/javascript">
 alert('Register success.');
-window.location.href = 'home.php';
+//window.location.href = 'home.php';
 </script>
 HTML;
         /*
@@ -167,6 +90,7 @@ Password: ติดต่อผมโดยตรง
 
     } catch(Exception $e) {
         $pdo->rollBack();
+        echo $e->getMessage();
         throw $e;
     }
 
@@ -342,7 +266,7 @@ Password: ติดต่อผมโดยตรง
                 <p  style="text-align: left;margin-left: 28px; width: 200px;">
                     Please fill in other requirement if any<br>
                     <textarea style="width: 349px;
-height: 114px;" name="fill_ requirement"></textarea>
+height: 114px;" name="fill_requirement"></textarea>
 
                 </p>
                 <p>
