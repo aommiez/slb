@@ -36,9 +36,11 @@
     <p class="font-minion">Language</p>
     <div class="section-div">
         <img class="pull-right" style="margin-left: 20px;" src="images/Language/Image259x309.png">
-        <p style="text-indent:50px;">As visitors to Thailand also include many Europeans and other Asians,
+        <p style="text-indent:50px;">
+            <!-- As visitors to Thailand also include many Europeans and other Asians,
             Thai people's language skills often also include these other languages to
-            varying degrees.  The Thai language itself is challenging to master, but
+            varying degrees.  -->
+            The Thai language itself is challenging to master, but
             Thai people are happy to help foreigners learn a few words to help them
             get around.  However, English is typically the common currency for cross
             -cultural conversation as Thailand hosts visitors from around the world.
@@ -53,6 +55,7 @@
             that Thai people enjoy helping them with their pronunciation of the Thai
             language.</p>
     </div>
+    <!--
     <div class="section-div" style="text-indent:50px;">
         With so many visitors, the Thailand communications system has many features that make it very accessible to foreigners.  In regards
         to telephone use, it is possible to get a Thai SIM card at most international airports and both rental mobile phones and SIM cards are
@@ -60,6 +63,7 @@
         and there are internet cafes throughout Thailand that feature Skype headsets specifically to cater to visitors wishing to communicate
         with friends and family back home.  The Thailand communications system is both modern and convenient for visitors to use.
     </div>
+    -->
     <p class="section-div font-minion">Basic Thai  language</p>
     <div class="section-div">
         <table class="my-table">

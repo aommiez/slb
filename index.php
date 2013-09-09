@@ -95,18 +95,31 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
         </p>
     </form>
+    <a href="mailto:interchangebkk@slb.com?Subject=Hello" style="
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        right: -175px;
+        opacity: 1;
+        z-index: 3;
+        opacity: 0;
+    ">
+        interchangebkk@slb.com
+    </a>
     <footer class="page-footer">
-        <a href="mailto:interchangebkk@slb.com?Subject=Hello" target="_top" style="position: absolute;bottom: 10px; right: 180px; display: none;">
-            interchangebkk@slb.com</a>
+
     </footer>
 </div>
 <script type="text/javascript" src="js/jquery.countdown/jquery.countdown.min.js"></script>
 <script type="text/javascript">
 $(function(){
-    var liftoffTime = new Date('1-1-2014');
-    $('.count-down').countdown({until: liftoffTime, compact: true,
+    var liftoffTime = new Date('2013-12-02');
+    $('.count-down').countdown({
+        until: liftoffTime,
+        compact: true,
         layout: 'COUNT DOWN TO THE EVENT DAY<br /><b>{dn}<br />DAY</b>',
-        description: 'to wait'});
+        description: 'to wait'
+    });
 });
 </script>
 </body>

@@ -28,6 +28,10 @@
 .upper-text {
     vertical-align: super; font-size: 13px;
 }
+
+.arrow-down {
+    cursor: pointer;
+}
 </style>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -399,3 +403,4 @@ No High-heeled Shoes</span>
     </tr>
 </table>
 </div>
+<div class="end-icon"></div>

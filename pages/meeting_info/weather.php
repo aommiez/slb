@@ -20,11 +20,20 @@
 </style>
 <script type="text/javascript">
     $(document).ready(function(){
+        function triggerH(){
+            $('.bg-wrap').height($('.bg-wrap').height()+1);
+            setTimeout(function(){
+                $('.bg-wrap').height('100%');
+            },500);
+        }
+
         $("#s1Click").bind('click',function(){
             if ($("#s1").is(":visible")) {
                 $("#s1").hide();
             } else {
                 $("#s1").show();
+                $(this).hide();
+                triggerH();
             }
         });
 
@@ -33,6 +42,8 @@
                 $("#s2").hide();
             } else {
                 $("#s2").show();
+                $(this).hide();
+                triggerH();
             }
         });
 
@@ -41,6 +52,8 @@
                 $("#s3").hide();
             } else {
                 $("#s3").show();
+                $(this).hide();
+                triggerH();
             }
         });
     });

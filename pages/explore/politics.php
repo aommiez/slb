@@ -3,6 +3,11 @@
 .section-div {
     margin-top: 22px;
 }
+
+p {
+    text-align:justify;
+    text-justify:inter-word;
+}
 </style>
 <div>
     <p><img src="images/Politics/Politics275x774.png"></p>

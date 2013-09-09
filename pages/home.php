@@ -14,8 +14,7 @@
         relationships, and to build on the team spirit that makes our company unique.
     </p>
     <p style="text-align: center;" class="fontColor">
-        <br />
-        Together we will win
+        <strong>Aim Hight Win Together</strong>
     </p>
 
 
