@@ -167,7 +167,7 @@ HTML;
 </style>
 <div class="section-div">
     <form class="register-form" method="post">
-        <div class="bar section-div">Personal Infomation</div>
+        <div class="bar section-div">Personal Information</div>
         <div class="section-div">
             <div class="pull-left" style="width: 44%; margin: 0 3%">
                 <label>First Name</label>

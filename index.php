@@ -135,6 +135,8 @@ $(function(){
                 alert('Incorrect password');
             } else if ( data == 999 ) {
                 window.location.href="home.php";
+            } else {
+                alert("system error");
             }
         });
     });
