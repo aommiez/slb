@@ -50,7 +50,7 @@
 <div class="clearfix"></div>
 <div class="section-hotel">
     <img class="pull-left" src="images/Hotel/Hotel2.png" style="margin-right: 37px;">
-    <p class="font-minion">From Airport to Hotel</p>
+    <p class="font-minion">Airport Transfer</p>
     <p style="text-indent:50px;" class="fontColor fontJustify">
         All transportations from and to the airport will be organized by the InterChange team based your flight details. Please make sure that you provide updated flight details at registration page. Please update your registration immediately if there is any change. InterChange staff will pick you up right at your arrival gate please look for the signage shows in this picture.
     </p>

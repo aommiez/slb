@@ -31,6 +31,10 @@
 
 .meeting-content {
     background: rgba(0,0,0,0.6);
+
+    -ms-background: none;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+
     width: 100%;
     box-sizing: border-box;
     position: absolute;
@@ -58,8 +62,7 @@
             <img src="images/Meeting/Hotel208x372.png">
         </div>
         <div class="meeting-content">
-            <b>Siam Kempinski Hotel</b>, the most luxury 5 stars hotel in<br />
-            the center of Bangkok Metropolitan
+            The Siam Kempinski Hotel will be reserved for all participants for 4 nights from 2nd to 6th Dec. Check-in time is 2 p.m. on 2nd Dec, check-out time is 12 p.m. on 6th Dec. 
             <a href="home.php?page=meeting_info/hotel">more »</a>
         </div>
         <div class="meeting-shadow"></div>
@@ -69,9 +72,8 @@
             <img src="images/Meeting/Visa208x372.png">
         </div>
         <div class="meeting-content">
-            Entering Kingdom of Thailand for business is required to obtain
-            a Non-Immigrant Category “B” (Business visa) from a Royal
-            Thai Embassy or a Royal Thai Consulate-General
+            All participants are required to obtain a Non-Immigrant Category “B” (Business visa), even though nationals of certain countries are eligible for Tourist visa exemption. 
+
             <a href="home.php?page=meeting_info/visa">more »</a>
         </div>
         <div class="meeting-shadow"></div>
@@ -82,8 +84,7 @@
             <img src="images/Meeting/Facilities208x372.png">
         </div>
         <div class="meeting-content">
-            <b>The electricity in Thailand is</b><br />
-            220 volts, 50 cycles/sec. Plugs A & C.<br />
+           The event venue will be well prepared for your convenient stay. See more info for electricity system, internet access and currency exchange.
             <a href="home.php?page=meeting_info/facilities">more »</a>
         </div>
         <div class="meeting-shadow"></div>
@@ -99,9 +100,7 @@ top: 70px; width: 100%; box-sizing: border-box; padding: 0 10px;">
             <img class="pull-right" src="images/Meeting/NInight52x98.png">
         </div>
         <div class="meeting-content">
-            <b>The Weather on 2-5 December in Bangkok will be</b><br />
-            Day :   approximately 31-34 C<br />
-            Night : approximately 21-25 C
+            December is high to peak season in Thailand and one of the reasons that is the case is because the weather is brilliant. The temperatures are usually comfortable between 21-34 °C
             <a href="home.php?page=meeting_info/weather">more »</a>
         </div>
         <div class="meeting-shadow"></div>
