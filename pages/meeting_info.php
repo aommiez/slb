@@ -31,10 +31,6 @@
 
 .meeting-content {
     background: rgba(0,0,0,0.6);
-
-    -ms-background: none;
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
-
     width: 100%;
     box-sizing: border-box;
     position: absolute;

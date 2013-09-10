@@ -28,10 +28,6 @@
 .upper-text {
     vertical-align: super; font-size: 13px;
 }
-
-.arrow-down {
-    cursor: pointer;
-}
 </style>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -66,7 +62,7 @@
     });
 </script>
 <div class="bar my-bar">December 2<span class="upper-text">nd</span>, 2013<span class="arrow-down" id="tb1arrow"></span></div>
-<div id="tb1div" style="display: none;">
+<div id="tb1div">
 <table class="my-table">
     <tr>
         <th width="147">Time</th>
@@ -77,19 +73,19 @@
 
     <tr>
         <td>08.00 – 16.00 (8.00)</td>
-        <td>Registration</td>
+        <td>Event Registration</td>
         <td>Registration Area</td>
         <td rowspan="2"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
-        <td>16.00 – 19.00 (3.00)</td>
+        <td>16.00 – 18.00 (2.00)</td>
         <td>Workshop Preparation Wrap Up</td>
-        <td>Breakout Rooms</td>
+        <td></td>
     </tr>
 
     <tr>
-        <td>19.00 – 22.00 (3.00)</td>
-        <td>Welcome Cocktail</td>
+        <td>18.00 – 19.00 (1.00)</td>
+        <td>Team Building #1</td>
         <td>Garden</td>
         <td rowspan="2">
             <span class="pull-left">Smart Casual<br />
@@ -98,15 +94,15 @@
         </td>
     </tr>
     <tr>
-        <td>19.30 – 20.30 (1.00)</td>
-        <td>Team Building #1</td>
+        <td>19.00 – 23.00 (4.00)</td>
+        <td>Welcome Cocktail</td>
         <td>Garden</td>
     </tr>
 </table>
 </div>
 
 <div class="bar my-bar">December 3<span class="upper-text">rd</span>, 2013<span class="arrow-down" id="tb2arrow"></span></div>
-<div id="tb2div" style="display: none;">
+<div id="tb2div">
 <table class="my-table">
     <tr>
         <th width="147">Time</th>
@@ -117,7 +113,7 @@
 
     <tr>
         <td>06.00 – 07.00 (1.00)</td>
-        <td>Morning Activity (optional)</td>
+        <td>Optional Morning Activity</td>
         <td>Defined Areas</td>
         <td>
             <span class="pull-left">Sportswear</span>
@@ -127,13 +123,14 @@
     <tr>
         <td>07.00 – 08.00 (1.00)</td>
         <td>Breakfast</td>
-        <td>Hotel Restaurant</td>
-        <td rowspan="4"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>08.00 – 08.45 (0.45)</td>
         <td>Opening Ceremony</td>
         <td rowspan="3">Ballroom</td>
+        <td rowspan="8"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
         <td>08.45 – 09.30 (0.45)</td>
@@ -147,13 +144,11 @@
         <td>10.15 – 10.30 (0.15)</td>
         <td>Coffee Break</td>
         <td>Break Area</td>
-        <td></td>
     </tr>
     <tr>
         <td>10.30 – 11.30 (1.00)</td>
         <td>Panel Discussion #1</td>
         <td rowspan="2">Ballroom</td>
-        <td rowspan="4"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
         <td>11.30 – 12.15 (0.45)</td>
@@ -162,7 +157,7 @@
     <tr>
         <td>12.15 – 13.15 (1.00)</td>
         <td>Lunch</td>
-        <td>Hotel Restaurant</td>
+        <td></td>
     </tr>
     <tr>
         <td>13.15 – 14.00 (0.45)</td>
@@ -175,7 +170,10 @@
         <td>Meet in Lobby</td>
         <td>
             <span class="pull-left"><b>Polo shirt with pants<br />
-and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
+and sneakers.</b><br />
+Short pants, skirts,<br />
+vest and strapless<br />
+are not allowed</span>
             <span class="pull-right text-center">
                 <p>
                     <img src="images/Agenda/shirt4_24x26.png">
@@ -186,7 +184,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
         </td>
     </tr>
     <tr>
-        <td>19.00 – 19.50 (0.50)</td>
+        <td>19.00 – 19.20 (0.20)</td>
         <td>Fresh Up</td>
         <td>Private Room</td>
         <td rowspan="3">
@@ -199,7 +197,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
         </td>
     </tr>
     <tr>
-        <td>19.50 – 23.30 (3.40)</td>
+        <td>19.20 – 23.30 (4.10)</td>
         <td>Dinner Party</td>
         <td>Meet in Lobby</td>
     </tr>
@@ -211,7 +209,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
 </table>
 </div>
 <div class="bar my-bar">December 4<span class="upper-text">th</span>, 2013<span class="arrow-down" id="tb3arrow"></span></div>
-<div id="tb3div" style="display: none;">
+<div id="tb3div">
 <table class="my-table">
     <tr>
         <th width="147">Time</th>
@@ -221,7 +219,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     </tr>
     <tr>
         <td>06.00 – 07.00 (1.00)</td>
-        <td>Morning Activity (optional)</td>
+        <td>Optional Morning Activity</td>
         <td>Defined Areas</td>
         <td>
             <span class="pull-left">Sportswear</span>
@@ -231,13 +229,14 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     <tr>
         <td>07.00 – 08.00 (1.00)</td>
         <td>Breakfast</td>
-        <td>Hotel Restaurant</td>
-        <td rowspan="9"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>08.00 – 08.15 (0.15)</td>
         <td>Day Overview</td>
         <td rowspan="2">Ballroom</td>
+        <td rowspan="8"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
         <td>08.15 – 09.00 (0.45)</td>
@@ -245,13 +244,13 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     </tr>
     <tr>
         <td>09.00 – 11.45 (2.45)</td>
-        <td>Technology Exhibitions</td>
-        <td>Functions room</td>
+        <td>Technology Exhibitions  + Coffee Break</td>
+        <td></td>
     </tr>
     <tr>
         <td>11.45 – 12.45 (1.00)</td>
         <td>Lunch</td>
-        <td>Restaurant</td>
+        <td></td>
     </tr>
     <tr>
         <td>12.45 – 13.45 (1.00)</td>
@@ -274,7 +273,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     </tr>
     <tr>
         <td>17.30 – 18.00 (0.30)</td>
-        <td>Fresh Up</td>
+        <td>Self Preparation</td>
         <td>Private Room</td>
         <td rowspan="2">
             <span class="pull-left">Casual Dress</span>
@@ -298,7 +297,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
 </table>
 </div>
 <div class="bar my-bar">December 5<span class="upper-text">th</span>, 2013<span class="arrow-down" id="tb4arrow"></span></div>
-<div id="tb4div" style="display: none;">
+<div id="tb4div">
 <table class="my-table">
     <tr>
         <th width="147">Time</th>
@@ -308,7 +307,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     </tr>
     <tr>
         <td>06.00 – 07.00 (1.00)</td>
-        <td>Morning Activity (optional)</td>
+        <td>Optional Morning Activity</td>
         <td>Defined Areas</td>
         <td>
             <span class="pull-left">Sportswear</span>
@@ -318,17 +317,20 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     <tr>
         <td>07.00 – 08.00 (1.00)</td>
         <td>Breakfast</td>
-        <td>Hotel Restaurant</td>
-        <td rowspan="12"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>08.00 – 08.15 (0.15)</td>
         <td>Day Overview</td>
-        <td rowspan="2">Ballroom</td>
+        <td>Ballroom</td>
+        <td rowspan="11"><span class="pull-left">Smart Casual</span><span class="pull-right"><img src="images/Agenda/shirt2_31x27.png"></span></td>
     </tr>
     <tr>
         <td>08.15 – 10.15 (2.00)</td>
-        <td>Workshop Presentations</td>
+        <td>Workshop Presentations<br />
+            (4Groups x 30Mins.)</td>
+        <td></td>
     </tr>
     <tr>
         <td>10.15 – 10.30 (0.15)</td>
@@ -337,7 +339,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     </tr>
     <tr>
         <td>10.30 – 11.15 (0.45)</td>
-        <td>External Speaker</td>
+        <td>Guest of Honor (???)</td>
         <td rowspan="2">Ballroom</td>
     </tr>
     <tr>
@@ -347,11 +349,11 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     <tr>
         <td>12.00 – 13.00 (1.00)</td>
         <td>Lunch</td>
-        <td>Hotel Restaurant</td>
+        <td></td>
     </tr>
     <tr>
         <td>13.00 – 14.00 (1.00)</td>
-        <td>Panel Discussion #3</td>
+        <td>Panel Discussion #3 (Clients)</td>
         <td>Ballroom</td>
     </tr>
     <tr>
@@ -366,7 +368,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     </tr>
     <tr>
         <td>14.30 – 15.30 (1.00)</td>
-        <td>CEO Keynote Speech / Round Table</td>
+        <td>Paal Keynote Speech / Round Table</td>
     </tr>
     <tr>
         <td>15.30 – 16.00 (0.30)</td>
@@ -397,4 +399,3 @@ No High-heeled Shoes</span>
     </tr>
 </table>
 </div>
-<div class="end-icon"></div>

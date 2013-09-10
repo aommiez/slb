@@ -52,9 +52,9 @@
     <div class="section-bkk">
         <img src="images/ExploreBKK/ExploreBKK265x774.png">
     </div>
-    <div class="section-bkk">
+    <div class="section-bkk"></div>
         <p class="font-minion">Thai custom</p>
-    </div>
+    <div>
     <div class="section-bkk">
         <div class="pull-left" style="width: 48%">
             - Thai people hold their King and Queen and the Royal Family
@@ -167,7 +167,7 @@
                 heart of Bangkok, Thailand.
                 <span id="s1" style="display: none;">assdasdasdsdadsaasdasadasd</span>
                 <br />
-                <a href="#abvc" id="s1bt">Read more ?</a>
+                <a href="#abvc" id="s1bt">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -180,7 +180,7 @@
                 Buddha or Wat Phra Kaew is
                 a royal chapel situated
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -193,7 +193,7 @@
                 temple of the Reclining
                 Buddha. It is also known ..
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -206,7 +206,7 @@
                 is among the best known of
                 Thailand’s landmarks and...
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         </div>
@@ -222,7 +222,7 @@
                 The major river in Thailand,
                 with its low alluvial plain...
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -235,7 +235,7 @@
                 Just few kilometres outside
                 Bangkok but still far enough...
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -248,7 +248,7 @@
                 It is a complex of various old
                 Thai structures that the ...
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -261,7 +261,7 @@
                 Yaowarat Road is home to
                 Bangkok’s China town...
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         </div>
@@ -280,7 +280,7 @@
                 Chatuchak weekend market
                 is one of the world’s largest..
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -293,7 +293,7 @@
                 Shopping center where is full
                 of well-known international..
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -306,7 +306,7 @@
                 One stop shopping center
                 where is full of fashionable..
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -319,7 +319,7 @@
                 Thailand’s first lifestyle
                 shopping complex where...
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="clearfix"></div>
@@ -340,7 +340,7 @@
                 complex of buildings at the
                 heart of Bangkok, Thailand.
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -353,7 +353,7 @@
                 Buddha or Wat Phra Kaew is
                 a royal chapel situated
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -366,7 +366,7 @@
                 temple of the Reclining
                 Buddha. It is also known ..
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="grid">
@@ -379,7 +379,7 @@
                 is among the best known of
                 Thailand’s landmarks and...
                 <br />
-                <a href="#">Read more ?</a>
+                <a href="#">Read more »</a>
             </p>
         </div>
         <div class="clearfix"></div>

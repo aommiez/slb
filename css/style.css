@@ -31,31 +31,24 @@ body {
     height: 58px;
     background: url('../images/Template/Top58x1158.png');
 
-    z-index: 1;
     position: absolute;
     top: -48px;
     left: -109px;
 }
 
 .page-wrap {
-    /*
     background: url('../images/Template/Contener935x1080.png');
-    background-size: cover;
-
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    */
 
     width: 940px;
     margin: 0 auto;
-    position: relative;
 }
 
-.page-header {
+header {
     position: relative;
     padding-top: 20px;
-    border: none;
 }
 
 .user-section {
@@ -136,7 +129,7 @@ body {
     cursor: pointer;
 }
 
-.page-footer {
+footer {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -145,7 +138,7 @@ body {
     width: 1280px;
     height: 242px;
     background: url('../images/Template/Foot242x1280.png');
-    /*pointer-events: none;*/
+    pointer-events: none;
 }
 a {
     color: #513311;
@@ -162,21 +155,6 @@ a {
 .regLink:hover {
     color:#513311;
     text-decoration: none;
-}
-
-
-.bg-wrap {
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.bg-wrap img {
-    width: 100%;
-    height: 100%;
 }
 /********* tool *********/
 .bar {

@@ -1,5 +1,4 @@
 <?php
-date_default_timezone_set("Asia/Bangkok");
 if($_SERVER['REQUEST_METHOD']=='POST'){
     echo '<script type="text/javascript">window.location.href="home.php"</script>';
     exit();
@@ -9,15 +8,12 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <html lang="th">
 <head>
     <meta http-equiv="content-Type" content="text/html" charset="utf-8">
-    <link href="favicon.ico" rel="icon" type="image/x-icon" />
-    <meta name="viewport" content="width=1208,  maximum-scale=2">
+    <meta name="viewport" content="width=940,  maximum-scale=2">
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <![endif]-->
-    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <title>Interchange Bangkok 2013</title>
+    <title>interchange bangkok 2013</title>
 
     <style type="text/css">
         heml, body {
@@ -36,7 +32,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             text-shadow: rgba(0,49,24,0.4) 0px 0px 1px;
         }
 
-        div.page-footer {
+        footer {
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -67,80 +63,23 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 </head>
 <body>
 <div class="wrap">
-    <div style="text-align: center;">
+    <header class="text-center">
         <img src="images/Login/Logo345x247.png">
-    </div>
-    <form  style="text-align: center; margin-top: 38px; position: relative; z-index: 2;"  >
+    </header>
+    <form method="post" style="text-align: center; margin-top: 38px;" action="login1.php">
         <div></div>
-        <input type="text" name="login" id="loginName"><br />
-        <input type="password" name="password" id="loginPass"><br />
-        <button id="loginClick" class="login-button"></button>
-        <p style="margin-top: 36px; color: rgb(239,228,198);" class="count-down">
-            COUNT DOWN TO THE EVENT DAY<br /><b>
-            <?php
-            $target = strtotime('2013-12-02 '.date('H:i:s', time()));
-            $now = time();
-            $dif = $target-$now;
-            $day = (int)($dif/(60*60*24));
-            echo $day;
-            ?>
-            <br />DAY</b>
+        <input type="text" name="login"><br />
+        <input type="password" name="password"><br />
+        <button type="submit" class="login-button"></button>
+        <p style="margin-top: 36px;">
+        <img src="images/Login/day57x179.png">
         </p>
     </form>
-    <a href="mailto:interchangebkk@slb.com?Subject=Hello" style="
-        display: block;
-        width: 140px;
-        height: 20px;
-        position: absolute;
-        bottom: 20px;
-        right: -175px;
-        z-index: 3;
-        opacity: 0;
-    "></a>
-    <div class="page-footer" style="z-index: 1;">
-    </div>
+    <footer class="page-footer">
+        <a href="mailto:interchangebkk@slb.com?Subject=Hello" target="_top" style="position: absolute;bottom: 10px; right: 180px; display: none;">
+            interchangebkk@slb.com</a>
+
+    </footer>
 </div>
-<script type="text/javascript" src="js/jquery.countdown/jquery.countdown.min.js"></script>
-<script type="text/javascript">
-$(function(){
-    /*
-    var liftoffTime = new Date(2013, 10, 10);
-    var nowTime = new Date();
-
-    var timeDiff = Math.abs(liftoffTime.getTime() - nowTime.getTime());
-    var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-    alert(diffDays);
-
-    $('.count-down').countdown({
-        targetDate: {
-            'day':         02,
-            'month':     12,
-            'year':     2013,
-            'hour':     0,
-            'min':         0,
-            'sec':         0
-        },
-        compact: true,
-        layout: 'COUNT DOWN TO THE EVENT DAY<br /><b>{dn}<br />DAY</b>',
-        description: 'to wait'
-    });
-*/
-
-    $("#loginClick").click(function(e){
-        e.preventDefault();
-        $.post("login1.php", { login: $("#loginName").val() , password: $("#loginPass").val() }, function(data) {
-            if (data == 0) {
-                alert("This website is restricted for InterChange participant only. \n Please contact interchangebkk@slb.com to request for the access. ");
-            } else if ( data == 1 ) {
-                alert('Incorrect password');
-            } else if ( data == 999 ) {
-                window.location.href="home.php";
-            } else {
-                alert("system error");
-            }
-        });
-    });
-});
-</script>
 </body>
 </html>
