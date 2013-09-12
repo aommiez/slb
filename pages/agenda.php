@@ -33,17 +33,8 @@
     cursor: pointer;
 }
 </style>
-
 <script type="text/javascript">
-
     $(document).ready(function(){
-        if ($.browser.msie  && parseInt($.browser.version, 10) === 9) {
-            $("#tb1div").show();
-            $("#tb2div").show();
-            $("#tb3div").show();
-            $("#tb4div").show();
-        }
-
         $("#tb1arrow").bind('click',function(){
             if ($("#tb1div").is(":visible")) {
                 $("#tb1div").slideUp('slow');

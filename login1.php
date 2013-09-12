@@ -64,15 +64,15 @@ if (isset($_POST['login']) && isset($_POST['password'])){
 
                     $_SESSION['login'] = 1;
                     $_SESSION['user_id'] = $user;
-                    echo 999;
+					echo 999;
                     exit();
                     //echo '<script type="text/javascript">window.location.href="home.php"</script>';
                     //echo "hello " . $_SESSION['user_id'];
 
             }
                 else{
-                    echo 1;
-                    exit();
+				echo 1;
+					 exit();
                     //exit("error try ldap_bind");
             }
             ldap_unbind( $ad );
@@ -80,7 +80,7 @@ if (isset($_POST['login']) && isset($_POST['password'])){
             exit("error Exception");
         }
     } else {
-        echo 0;
+		echo 0;
         exit();
     }
 }

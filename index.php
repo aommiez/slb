@@ -5,9 +5,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     exit();
 }
 ?>
-<!DOCTYPE html>
-<html lang="th">
-<head>
+<!DOCTYPE HTML>
+<meta http-equiv="x-ua-compatible" content="IE=Edge">
     <meta http-equiv="content-Type" content="text/html" charset="utf-8">
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
     <meta name="viewport" content="width=1208,  maximum-scale=2">
@@ -38,13 +37,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
         div.page-footer {
             position: absolute;
-            bottom: 0;
+            bottom: -14px;
             left: 50%;
             margin-left: -640px;
 
             width: 1280px;
-            height: 242px;
-            background: url('images/Template/Foot242x1280.png');
+            height: 229px;
+            background: url('foot.png');
             pointer-events: none;
         }
 
@@ -87,7 +86,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             <br />DAY</b>
         </p>
     </form>
-    <a href="mailto:interchangebkk@slb.com?Subject=Hello" style="
+    <a href="mailto:interchangebkk@slb.com?Subject=" style="
         display: block;
         width: 140px;
         height: 20px;
@@ -129,6 +128,7 @@ $(function(){
     $("#loginClick").click(function(e){
         e.preventDefault();
         $.post("login1.php", { login: $("#loginName").val() , password: $("#loginPass").val() }, function(data) {
+		
             if (data == 0) {
                 alert("This website is restricted for InterChange participant only. \n Please contact interchangebkk@slb.com to request for the access. ");
             } else if ( data == 1 ) {
@@ -136,8 +136,8 @@ $(function(){
             } else if ( data == 999 ) {
                 window.location.href="home.php";
             } else {
-                alert("system error");
-            }
+				alert("Website is not available. Please try again later.");
+			}
         });
     });
 });

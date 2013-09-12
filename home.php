@@ -1,19 +1,18 @@
 <?php
-/*
+
 session_start();
 if ($_SESSION['login'] != 1 ) {
     echo '<script type="text/javascript">window.location.href="index.php"</script>';
 }
-*/
 $page = isset($_GET['page'])? $_GET['page']: 'home';
 ?>
-<!DOCTYPE html>
-<html lang="th">
-<head>
+<!DOCTYPE HTML>
+<meta http-equiv="x-ua-compatible" content="IE=Edge">
     <meta http-equiv="content-Type" content="text/html" charset="utf-8">
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
     <meta name="viewport" content="width=1208,  maximum-scale=2">
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+
     <script type="text/javascript" src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" media="screen" href="css/font-face.css">
@@ -59,7 +58,7 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
             </div>
         </div>
 
-        <a href="mailto:interchangebkk@slb.com?Subject=Hello" style="
+        <a href="mailto:interchangebkk@slb.com?Subject=" style="
         display: block;
         position: absolute;
         bottom: 20px;
