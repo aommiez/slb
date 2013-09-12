@@ -141,10 +141,8 @@ body {
     bottom: -14px;
     left: 50%;
     margin-left: -640px;
-
     width: 1280px;
-    height: 242px;
-
+    height: 229px;
     background: url('foot.png');
     /*background: url('../images/Template/Foot242x1280.png');*/
     /*pointer-events: none;*/
