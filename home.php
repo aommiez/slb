@@ -1,9 +1,9 @@
 <?php
-
 session_start();
+/*
 if ($_SESSION['login'] != 1 ) {
     echo '<script type="text/javascript">window.location.href="index.php"</script>';
-}
+}*/
 $page = isset($_GET['page'])? $_GET['page']: 'home';
 ?>
 <!DOCTYPE HTML>
