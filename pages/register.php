@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
         */
 
 
-        $id = $pdo->lastInsertId();
+        //$id = $pdo->lastInsertId();
 		//print_r($_FILES['preferred_photo']);
 
         if(isset($_FILES['preferred_photo'])){
@@ -66,9 +66,9 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 			$filecheck = basename($_FILES['preferred_photo']['name']);
 			 $ext = substr($filecheck, strrpos($filecheck, '.') + 1);
 
-            $preferred_photo = 'preferred_photo/'.$id.'.'.$ext;
+            $preferred_photo = 'preferred_photo/'.$_SESSION['user_id'].'.'.$ext;
             move_uploaded_file($_FILES['preferred_photo']['tmp_name'], $preferred_photo);
-            $pdo->query("UPDATE registers SET preferred_photo='{$preferred_photo}' WHERE id='{$id}'");
+            $pdo->query("UPDATE registers SET preferred_photo='{$preferred_photo}' WHERE username='{$_SESSION['user_id']}'");
         }
 
         if(isset($_FILES['upload_passport_scan'])){
@@ -80,9 +80,9 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 				
 			$filecheck = basename($_FILES['upload_passport_scan']['name']);
 			 $ext = substr($filecheck, strrpos($filecheck, '.') + 1);
-            $upload_passport_scan = 'passport_scan/'.$id.'.'.$ext;
+            $upload_passport_scan = 'passport_scan/'.$_SESSION['user_id'].'.'.$ext;
             move_uploaded_file($_FILES['upload_passport_scan']['tmp_name'], $upload_passport_scan);
-            $pdo->query("UPDATE registers SET upload_passport_scan='{$upload_passport_scan}' WHERE id='{$id}'");
+            $pdo->query("UPDATE registers SET upload_passport_scan='{$upload_passport_scan}' WHERE username='{$_SESSION['user_id']}'");
         }
 
         $pdo->commit();
