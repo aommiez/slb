@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
     include('phpmailer/class.phpmailer.php');
@@ -15,6 +17,8 @@ if($_SERVER['REQUEST_METHOD']=='POST')
         $keys[] = $key;
         $values[] = "'".$value."'";
     }
+    $keys[] = 'username';
+    $values[] = $_SESSION['user_id'];
 
     $query = 'INSERT INTO registers('.implode(',', $keys).') VALUES('.implode(',', $values).')';
     $st = $pdo->prepare($query);
