@@ -1,10 +1,14 @@
 <?php
-session_start();
+//session_start();
+
+//test session
+//$_SESSION['user_id'] = 'slb';
+
+$pdo = new PDO('mysql:host=127.0.0.1;dbname=slb', 'root', '');
 
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
     include('phpmailer/class.phpmailer.php');
-    $pdo = new PDO('mysql:host=127.0.0.1;dbname=slb', 'root', '');
 
     $pdo->beginTransaction();
     $variables = $_POST;
@@ -17,19 +21,37 @@ if($_SERVER['REQUEST_METHOD']=='POST')
         $keys[] = $key;
         $values[] = "'".$value."'";
     }
-    $keys[] = 'username';
-    $values[] = $_SESSION['user_id'];
 
-    $query = 'INSERT INTO registers('.implode(',', $keys).') VALUES('.implode(',', $values).')';
-    $st = $pdo->prepare($query);
+    $count = $pdo->query("SELECT COUNT(*) as c FROM registers WHERE username='{$_SESSION['user_id']}'")->fetch(PDO::FETCH_ASSOC);
+    $count = $count['c'];
+
+    if($count != 0){
+        $q = array();
+        foreach($values as $key => $value){
+            $q[] = "{$keys[$key]}={$value}";
+        }
+        $q = implode(',', $q);
+        $query = "UPDATE registers SET {$q} WHERE username='{$_SESSION['user_id']}'";
+        $st = $pdo->prepare($query);
+    }
+    else {
+        $keys[] = 'username';
+        $values[] = "'".$_SESSION['user_id']."'";
+        $query = 'INSERT INTO registers('.implode(',', $keys).') VALUES('.implode(',', $values).')';
+        $st = $pdo->prepare($query);
+    }
+
 
     try{
-        $a = $st->execute($variables);
+        $a = $st->execute();
 
         /*
-        if(!$a)
+        if(!$a){
             var_dump($st->errorInfo());
+            exit();
+        }
         */
+
 
         $id = $pdo->lastInsertId();
 		//print_r($_FILES['preferred_photo']);
@@ -62,7 +84,6 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             move_uploaded_file($_FILES['upload_passport_scan']['tmp_name'], $upload_passport_scan);
             $pdo->query("UPDATE registers SET upload_passport_scan='{$upload_passport_scan}' WHERE id='{$id}'");
         }
-
 
         $pdo->commit();
 
@@ -103,15 +124,19 @@ Password: ติดต่อผมโดยตรง
 						 InterChange Bangkok Team';
         //$mail->AltBody = 'Thank you for register';
 		if(!$mail->Send()) {
+            /*
 		   echo 'Message could not be sent.';
 		   echo 'Mailer Error: ' . $mail->ErrorInfo;
 		   exit;
+            */
 		}
+        $alertMessage = ($count>0)? "Edit success.": "Register success.";
+        $redirHref = ($count>0)? "home.php?page=register": "home.php";
 echo <<<HTML
 
 <script type="text/javascript">
-	alert('Register success.');
-window.location.href = 'home.php';
+	alert('{$alertMessage}');
+    window.location.href = '';
 </script>
 HTML;
     } catch(Exception $e) {
@@ -120,6 +145,19 @@ HTML;
         throw $e;
     }
 
+}
+
+// user
+
+$result = $pdo->query("SELECT * FROM registers WHERE username='{$_SESSION['user_id']}'");
+$old_register = ($result->rowCount()>0)? $result->fetch(PDO::FETCH_ASSOC): false;
+function val_field($field)
+{
+    global $old_register;
+    if(isset($old_register[$field]))
+        return $old_register[$field];
+    else
+        return '';
 }
 ?>
 
@@ -150,28 +188,28 @@ HTML;
         <div class="section-div">
             <div class="pull-left" style="width: 44%; margin: 0 3%">
                 <label>First name</label>
-                <input class="input-block-level" type="text" name="first_name" TABINDEX=1>
+                <input class="input-block-level" type="text" name="first_name" value="<?php echo val_field('first_name');?>" TABINDEX=1>
                 <p>
                 <label>Gender (F/M)</label>
-                    <label class="radio inline"><input type="radio" name="gender" value="Male">Male </label>
-                    <label class="radio inline"><input type="radio" name="gender" value="Female" TABINDEX=3>Female </label>
+                    <label class="radio inline"><input type="radio" name="gender" value="Male" <?php if(val_field('gender')=='Male') echo "checked";?>>Male </label>
+                    <label class="radio inline"><input type="radio" name="gender" value="Female" TABINDEX=3 <?php if(val_field('gender')=='Female') echo "checked";?>>Female </label>
                 </p>
                 <label>Nationality</label>
-                <input class="input-block-level" type="text" name="nationality" TABINDEX=5>
+                <input class="input-block-level" type="text" name="nationality" value="<?php echo val_field('nationality');?>" TABINDEX=5>
                 <label>Mobile phone number</label>
-                <input class="input-block-level" type="text" name="mobile_phone_number" TABINDEX=7>
+                <input class="input-block-level" type="text" name="mobile_phone_number" value="<?php echo val_field('mobile_phone_number');?>" TABINDEX=7>
                 <label>Country of assignment</label>
-                <input class="input-block-level" type="text" name="contry_of_assignment" TABINDEX=9>
+                <input class="input-block-level" type="text" name="contry_of_assignment" value="<?php echo val_field('contry_of_assignment');?>" TABINDEX=9>
             </div>
             <div class="pull-left" style="width: 44%; margin: 0 3%">
                 <label>Last name</label>
-                <input class="input-block-level" type="text" name="last_name" TABINDEX=2>
+                <input class="input-block-level" type="text" name="last_name" value="<?php echo val_field('last_name');?>" TABINDEX=2>
                 <label>GIN number</label>
-                <input class="input-block-level" type="text" name="gin_number" TABINDEX=4>
+                <input class="input-block-level" type="text" name="gin_number" value="<?php echo val_field('gin_number');?>" TABINDEX=4>
                 <label>Email address</label>
-                <input class="input-block-level" type="text" name="email_address" TABINDEX=6>
+                <input class="input-block-level" type="text" name="email_address" value="<?php echo val_field('email_address');?>" TABINDEX=6>
                 <label>Segment</label>
-                <input class="input-block-level" type="text" name="segment" TABINDEX=8>
+                <input class="input-block-level" type="text" name="segment" value="<?php echo val_field('segment');?>" TABINDEX=8>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -180,51 +218,51 @@ HTML;
         <div class="section-div">
             <div class="pull-left" style="width: 44%; margin: 0 3%">
                 <label>Passport first name(s)</label>
-                <input class="input-block-level" type="text" name="passport_first_name" TABINDEX=10>
+                <input class="input-block-level" type="text" name="passport_first_name" value="<?php echo val_field('passport_first_name');?>" TABINDEX=10>
                 <label>Date of birth (DD/MM/YY)</label>
-                <input class="input-block-level date-jui" type="text" name="date_of_birth" TABINDEX=12>
+                <input class="input-block-level date-jui" type="text" name="date_of_birth" value="<?php echo val_field('date_of_birth');?>" TABINDEX=12>
                 <label>Country of issue</label>
-                <input class="input-block-level" type="text" name="contry_of_issue" TABINDEX=14>
+                <input class="input-block-level" type="text" name="contry_of_issue" value="<?php echo val_field('contry_of_issue');?>" TABINDEX=14>
                 <label>Date of Expiration</label>
-                <input class="input-block-level date-exp" type="text" name="date_of_expiration" TABINDEX=16>
+                <input class="input-block-level date-exp" type="text" name="date_of_expiration" value="<?php echo val_field('date_of_expiration');?>" TABINDEX=16>
                 <label>Arrival airline</label>
-                <input class="input-block-level" type="text" name="arrival_airline" TABINDEX=18>
+                <input class="input-block-level" type="text" name="arrival_airline" value="<?php echo val_field('arrival_airline');?>" TABINDEX=18>
                 <label>Departure date and time</label>
-                <input class="input-block-level datetime-jui" type="text" name="departure_date_and_time" TABINDEX=20>
+                <input class="input-block-level datetime-jui" type="text" name="departure_date_and_time" value="<?php echo val_field('departure_date_and_time');?>" TABINDEX=20>
                 <label>Departure flight number</label>
-                <input class="input-block-level" type="text" name="departure_flight_number" TABINDEX=22>
+                <input class="input-block-level" type="text" name="departure_flight_number" value="<?php echo val_field('departure_flight_number');?>" TABINDEX=22>
                 <label>Please confirm your hotel check-in date</label>
-                <input class="input-block-level date-jui" type="text" name="check_in_date" TABINDEX=23>
+                <input class="input-block-level date-jui" type="text" name="check_in_date" value="<?php echo val_field('check_in_date');?>" TABINDEX=23>
 				<p>
                 <label>Upload passport scan</label>
-                <input class="input-block-level" type="file" name="upload_passport_scan" TABINDEX=25>
+                <input class="input-block-level" type="file" name="upload_passport_scan" value="<?php echo val_field('upload_passport_scan');?>" TABINDEX=25>
 				</p>
 				<p>
                 <label>Are you travel with family? (Yes/No)</label>
-                <label class="radio inline"><input type="radio" name="travel_with_family" value="yes" >Yes </label>
-                <label class="radio inline"><input type="radio" name="travel_with_family" value="no" TABINDEX=26> No</label>
+                <label class="radio inline"><input type="radio" name="travel_with_family" value="yes" <?php if(val_field('travel_with_family')=='yes') echo "checked";?> >Yes </label>
+                <label class="radio inline"><input type="radio" name="travel_with_family" value="no" <?php if(val_field('travel_with_family')=='no') echo "checked";?> TABINDEX=26> No</label>
 				</p>
             </div>
             <div class="pull-left" style="width: 44%; margin: 0 3%">
                 <label>Passport last name(s)</label>
-                <input class="input-block-level" type="text" name="passport_last_name" TABINDEX=11>
+                <input class="input-block-level" type="text" name="passport_last_name" value="<?php echo val_field('passport_last_name');?>" TABINDEX=11>
                 <label>Passport number</label>
-                <input class="input-block-level" type="text" name="passport_number" TABINDEX=13>
+                <input class="input-block-level" type="text" name="passport_number" value="<?php echo val_field('passport_number');?>" TABINDEX=13>
                 <label>Date of issue</label>
-                <input class="input-block-level date-jui" type="text" name="date_of_issue" TABINDEX=15>
+                <input class="input-block-level date-jui" type="text" name="date_of_issue" value="<?php echo val_field('date_of_issue');?>" TABINDEX=15>
                 <label>Arrival date and time</label>
-                <input class="input-block-level datetime-jui" type="text" name="arrival_date_and_time" TABINDEX=17>
+                <input class="input-block-level datetime-jui" type="text" name="arrival_date_and_time" value="<?php echo val_field('arrival_date_and_time');?>" TABINDEX=17>
                 <label>Arrival flight number</label>
-                <input class="input-block-level" type="text" name="arrival_flight_number" TABINDEX=19>
+                <input class="input-block-level" type="text" name="arrival_flight_number" value="<?php echo val_field('arrival_flight_number');?>" TABINDEX=19>
                 <label>Departure airline</label>
-                <input class="input-block-level" type="text" name="departure_airline" TABINDEX=21>
+                <input class="input-block-level" type="text" name="departure_airline" value="<?php echo val_field('departure_airline');?>" TABINDEX=21>
 
                 <div style="height: 65px;"></div>
 
                 <label>Please confirm your hotel check-out date </label>
-                <input class="input-block-level date-jui" type="text" name="check_out_date" TABINDEX=24>
+                <input class="input-block-level date-jui" type="text" name="check_out_date" value="<?php echo val_field('check_out_date');?>" TABINDEX=24>
                 <label>Please give us your family details </label>
-                <textarea class="input-block-level" name="family_details" TABINDEX=27></textarea>
+                <textarea class="input-block-level" name="family_details" value="<?php echo val_field('family_details');?>" TABINDEX=27></textarea>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -242,52 +280,52 @@ HTML;
                 <div>
                     <div class="pull-left" style="width: 47%; margin-right: 3%">
                         <label>Weight</label>
-                        <input class="input-block-level" type="text" name="weight" TABINDEX=30>
+                        <input class="input-block-level" type="text" name="weight" value="<?php echo val_field('weight');?>" TABINDEX=30>
                     </div>
                     <div class="pull-left" style="width: 50%;">
                         <label>Height</label>
-                        <input class="input-block-level" type="text" name="height" TABINDEX=31>
+                        <input class="input-block-level" type="text" name="height" value="<?php echo val_field('height');?>" TABINDEX=31>
                     </div>
                 </div>
                 <p>
                 <label>Shirt size </label>
 
-                <label class="radio inline"><input type="radio" name="body_size" value="xs" TABINDEX=32>XS </label>
-                <label class="radio inline"><input type="radio" name="body_size" value="s">S </label>
-                <label class="radio inline"><input type="radio" name="body_size" value="m">M </label>
-                <label class="radio inline"><input type="radio" name="body_size" value="l">L </label>
-                <label class="radio inline"><input type="radio" name="body_size" value="xl">XL </label>
+                <label class="radio inline"><input type="radio" name="body_size" value="xs" <?php if(val_field('body_size')=='xs') echo "checked";?> TABINDEX=32>XS </label>
+                <label class="radio inline"><input type="radio" name="body_size" value="s" <?php if(val_field('body_size')=='s') echo "checked";?>>S </label>
+                <label class="radio inline"><input type="radio" name="body_size" value="m" <?php if(val_field('body_size')=='m') echo "checked";?>>M </label>
+                <label class="radio inline"><input type="radio" name="body_size" value="l" <?php if(val_field('body_size')=='l') echo "checked";?>>L </label>
+                <label class="radio inline"><input type="radio" name="body_size" value="xl" <?php if(val_field('body_size')=='xl') echo "checked";?>>XL </label>
                     </p>
 <p>
                 <label>Pants size </label>
 
-                <label class="radio inline"><input type="radio" name="waistline_size" value="xs" TABINDEX=33>XS </label>
-                <label class="radio inline"><input type="radio" name="waistline_size" value="s">S </label>
-                <label class="radio inline"><input type="radio" name="waistline_size" value="m">M </label>
-                <label class="radio inline"><input type="radio" name="waistline_size" value="l">L </label>
-                <label class="radio inline"><input type="radio" name="waistline_size" value="xl">XL </label>
+                <label class="radio inline"><input type="radio" name="waistline_size" value="xs" <?php if(val_field('waistline_size')=='xs') echo "checked";?> TABINDEX=33>XS </label>
+                <label class="radio inline"><input type="radio" name="waistline_size" value="s" <?php if(val_field('waistline_size')=='s') echo "checked";?>>S </label>
+                <label class="radio inline"><input type="radio" name="waistline_size" value="m" <?php if(val_field('waistline_size')=='m') echo "checked";?>>M </label>
+                <label class="radio inline"><input type="radio" name="waistline_size" value="l" <?php if(val_field('waistline_size')=='l') echo "checked";?>>L </label>
+                <label class="radio inline"><input type="radio" name="waistline_size" value="xl" <?php if(val_field('waistline_size')=='xl') echo "checked";?>>XL </label>
 </p>
                 <p>
                     <label>Please give us more information of your size details.</label>
-                    <input class="input-block-level" type="text" name="size_details" TABINDEX=34>
+                    <input class="input-block-level" type="text" name="size_details" value="<?php echo val_field('size_details');?>" TABINDEX=34>
                 </p>
             </div>
             <div class="pull-left" style="width: 44%; margin: 0 3%">
                 <label>Favorite color</label>
-                <input class="input-block-level" type="text" name="favorite_color" TABINDEX=29>
+                <input class="input-block-level" type="text" name="favorite_color" value="<?php echo val_field('favorite_color');?>" TABINDEX=29>
                 <label>Allergy or health condition(if any)</label>
-                <input class="input-block-level" type="text" name="health_condition" TABINDEX=35>
+                <input class="input-block-level" type="text" name="health_condition" value="<?php echo val_field('health_condition');?>" TABINDEX=35>
 
                 <p>
                 <label>Food restriction</label>
-                <label class="radio inline"><input type="radio" name="food_restriction" TABINDEX=36>No restriction </label>
-                <label class="radio inline"><input type="radio" name="food_restriction">Halal </label>
-                <label class="radio inline"><input type="radio" name="food_restriction">Vegetarian </label>
+                <label class="radio inline"><input type="radio" name="food_restriction" value="No restriction" <?php if(val_field('food_restriction')=='No restriction') echo "checked";?> TABINDEX=36>No restriction </label>
+                <label class="radio inline"><input type="radio" name="food_restriction" value="Halal" <?php if(val_field('food_restriction')=='Halal') echo "checked";?>>Halal </label>
+                <label class="radio inline"><input type="radio" name="food_restriction" value="Vegetarian" <?php if(val_field('food_restriction')=='Vegetarian') echo "checked";?>>Vegetarian </label>
                 </p>
                 <p>
                 <label>Smoking / Non smoking</label>
-                <label class="radio inline"><input type="radio" name="smoke" TABINDEX=37>Smoking </label>
-                <label class="radio inline"><input type="radio" name="smoke">Non smoking </label>
+                <label class="radio inline"><input type="radio" name="smoke" value="Smoking" TABINDEX=37 <?php if(val_field('smoke')=='Smoking') echo "checked";?>>Smoking </label>
+                <label class="radio inline"><input type="radio" name="smoke" value="Non smoking" <?php if(val_field('smoke')=='Non smoking') echo "checked";?>>Non smoking </label>
                 </p>
             </div>
             <div class="clearfix"></div>
@@ -297,7 +335,7 @@ HTML;
                 </p>
                 <p  style="text-align: left;margin-left: 28px; width: 200px;">
                     Please fill in other requirement(if any)<br>
-                    <textarea style="width: 349px; height: 114px;" name="fill_requirement" TABINDEX=38></textarea>
+                    <textarea style="width: 349px; height: 114px;" name="fill_requirement" value="<?php echo val_field('fill_requirement');?>" TABINDEX=38></textarea>
 
                 </p>
                 <p>
@@ -462,6 +500,7 @@ $(function(){
             i14.removeClass('error');
         }
 //13
+        <?php if(!$old_register){?>
 		if($.trim(i13.val())==''){
             i13.addClass('error').focus();
             $(window).scrollTop(i13.offset().top-30);
@@ -470,6 +509,7 @@ $(function(){
         else {
             i13.removeClass('error');
         }
+        <?php }?>
 //12
 		if($.trim(i12.val())==''){
             i12.addClass('error').focus();

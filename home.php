@@ -1,9 +1,8 @@
 <?php
 session_start();
-/*
 if ($_SESSION['login'] != 1 ) {
     echo '<script type="text/javascript">window.location.href="index.php"</script>';
-}*/
+}
 $page = isset($_GET['page'])? $_GET['page']: 'home';
 ?>
 <!DOCTYPE HTML>
@@ -41,7 +40,7 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
                     <a href="home.php" class="<?php if($page=='home') echo 'active';?>">Home</a>
                     <a href="home.php?page=meeting_info" class="<?php if($page=='meeting_info') echo 'active';?>">Meeting Info</a>
                     <a href="home.php?page=agenda" class="<?php if($page=='agenda') echo 'active';?>">Agenda</a>
-                    <a href="#home.php?page=explore_thailand" class="<?php if($page=='explore_thailand') echo 'active';?>">Explore Thailand</a>
+                    <a href="home.php?page=explore_thailand" class="<?php if($page=='explore_thailand') echo 'active';?>">Explore Thailand</a>
                     <a href="#home.php?page=who_is_coming" class="<?php if($page=='who_is_coming') echo 'active';?>">Who's coming?</a>
                     <a href="#home.php?page=gallery" class="<?php if($page=='gallery') echo 'active';?>">Gallery</a>
                 </div>

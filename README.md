@@ -20,3 +20,4 @@ File Path
 - Explore Thailand ( pages/explore_thailand.php )
 - Who coming ( pages/who_is_coming.php )
 - gallery ( pages/gallery.php )
+
