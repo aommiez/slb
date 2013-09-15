@@ -14,6 +14,14 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             }
         }
 
+        foreach($_POST['del'] as $key=> $value){
+            if($value=='yes'){
+                if(!$pdo->query("DELETE FROM whos WHERE id='{$key}'")){
+                    throw new Exception('');
+                }
+            }
+        }
+
         echo <<<HTML
 <script type="text/javascript">
 window.location.reload();
@@ -44,10 +52,30 @@ $whos = $pdo->query("SELECT * FROM whos WHERE type='{$type}'")->fetchAll(PDO::FE
     <h3>Upload whos</h3>
     <div id="file_upload_1"></div>
 </div>
+<style type="text/css">
+    .t-block {
+        position: relative;
+    }
+    .t-block.del {
+        background: rgba(255,0,0,0.3);
+    }
+
+    .t-block .del-button {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .t-block:hover .del-button {
+        display: block;
+    }
+</style>
 <form method="post">
     <ul class="thumbnails">
         <?php foreach($whos as $value){?>
-        <li class="span3">
+        <li class="span3 t-block">
             <div class="thumbnail">
                 <p class="text-center"><img src="img_whos/<?php echo $value['path'];?>" height="100"></p>
                 <label>title</label>
@@ -55,6 +83,8 @@ $whos = $pdo->query("SELECT * FROM whos WHERE type='{$type}'")->fetchAll(PDO::FE
                 <label>description</label>
                 <input class="input-block-level" type="text" name="description[<?php echo $value['id'];?>]" value="<?php echo $value['description'];?>">
             </div>
+            <span class="icon-remove del-button"></span>
+            <input class="is-del" type="hidden" name="del[<?php echo $value['id'];?>]" value="no">
         </li>
         <?php }?>
     </ul>
@@ -67,12 +97,21 @@ $whos = $pdo->query("SELECT * FROM whos WHERE type='{$type}'")->fetchAll(PDO::FE
 <script type="text/javascript">
 $(function() {
     $("#file_upload_1").uploadify({
-        formData: { type: '<?php echo $_GET['type'];?>' },
+        formData: { type: '<?php echo $type;?>' },
         swf           : 'uploadify/uploadify.swf',
         uploader      : 'uploadify_whos.php',
         'onQueueComplete' : function(queueData) {
             window.location.reload();
         }
+    });
+
+    $('.del-button').click(function(e){
+        var tb = $(this).closest('.t-block');
+        tb.toggleClass('del');
+        if(tb.hasClass('del'))
+            $('.is-del', tb).val('yes');
+        else
+            $('.is-del', tb).val('no');
     });
 });
 </script>
