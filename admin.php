@@ -1,4 +1,4 @@
- <?php
+<?php
 session_start();
 date_default_timezone_set("Asia/Bangkok");
 $page = isset($_GET['page'])? $_GET['page']: 'home';

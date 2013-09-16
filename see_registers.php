@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO('mysql:host=127.0.0.1;dbname=slb', 'root', '');
+$pdo = new PDO('mysql:host=127.0.0.1;dbname=admin_slb', 'admin_slb', '111111');
 $registers = $pdo->query("SELECT * FROM registers")->fetchAll();
 ?>
 <!DOCTYPE html>
