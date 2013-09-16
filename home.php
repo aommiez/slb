@@ -16,6 +16,7 @@ $page = isset($_GET['page'])? $_GET['page']: 'home';
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
 
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/Sound.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" media="screen" href="css/font-face.css">
     <link rel="stylesheet" media="screen" href="css/style.css">
