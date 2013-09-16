@@ -1,10 +1,8 @@
 <?php
-//session_start();
+session_start();
 
 //test session
 //$_SESSION['user_id'] = 'slb';
-
-$pdo = new PDO('mysql:host=127.0.0.1;dbname=slb', 'root', '');
 
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
