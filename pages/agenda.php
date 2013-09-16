@@ -1,6 +1,6 @@
 <style type="text/css">
 .my-bar {
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 .my-table {
@@ -65,7 +65,7 @@
         });
     });
 </script>
-<div class="bar my-bar">December 2<span class="upper-text">nd</span>, 2013<span class="arrow-down" id="tb1arrow"></span></div>
+<div class="barA my-bar">December 2<span class="upper-text">nd</span>, 2013<span class="arrow-down" id="tb1arrow"></span></div>
 <div id="tb1div" style="display: none;">
 <table class="my-table">
     <tr>
@@ -105,7 +105,7 @@
 </table>
 </div>
 
-<div class="bar my-bar">December 3<span class="upper-text">rd</span>, 2013<span class="arrow-down" id="tb2arrow"></span></div>
+<div class="barA my-bar">December 3<span class="upper-text">rd</span>, 2013<span class="arrow-down" id="tb2arrow"></span></div>
 <div id="tb2div" style="display: none;">
 <table class="my-table">
     <tr>
@@ -210,7 +210,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     </tr>
 </table>
 </div>
-<div class="bar my-bar">December 4<span class="upper-text">th</span>, 2013<span class="arrow-down" id="tb3arrow"></span></div>
+<div class="barA my-bar">December 4<span class="upper-text">th</span>, 2013<span class="arrow-down" id="tb3arrow"></span></div>
 <div id="tb3div" style="display: none;">
 <table class="my-table">
     <tr>
@@ -297,7 +297,7 @@ and sneakers.</b><br />avoid shorts, skirts,<br /> vest and strapless</span>
     </tr>
 </table>
 </div>
-<div class="bar my-bar">December 5<span class="upper-text">th</span>, 2013<span class="arrow-down" id="tb4arrow"></span></div>
+<div class="barA my-bar">December 5<span class="upper-text">th</span>, 2013<span class="arrow-down" id="tb4arrow"></span></div>
 <div id="tb4div" style="display: none;">
 <table class="my-table">
     <tr>
