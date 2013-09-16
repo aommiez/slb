@@ -95,15 +95,15 @@ $galleries = $pdo->query("SELECT * FROM galleries WHERE day='{$day}'")->fetchAll
 <script type="text/javascript">
 $(function() {
     $("#file_upload_1").uploadify({
-        //'debug'    : true,
+        'debug'    : true,
         //'preventCaching' : false,
         formData: { day: '<?php echo $day;?>' },
-        'script': 'uploadify_gallery.php',
+       // 'script': 'uploadify_gallery.php',
         swf           : 'uploadify/uploadify.swf',
         uploader      : 'uploadify_gallery.php',
         'onQueueComplete' : function(queueData) {
             //alert(queueData.uploadsSuccessful);
-            window.location.reload();
+           // window.location.reload();
         },
         'onUploadError' : function(file, errorCode, errorMsg, errorString) {
             alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
