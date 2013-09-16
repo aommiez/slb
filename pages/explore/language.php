@@ -36,7 +36,7 @@
     <p class="font-minion">Language</p>
     <div class="section-div">
         <img class="pull-right" style="margin-left: 20px;" src="images/Language/Image259x309.png">
-        <p style="text-indent:50px;">
+        <p style="text-indent:50px;" class="fontJustify">
             <!-- As visitors to Thailand also include many Europeans and other Asians,
             Thai people's language skills often also include these other languages to
             varying degrees.  -->

@@ -331,7 +331,7 @@ function val_field($field)
                 <p class="section-div">
                 <img src="images/Registeration/SizeChart577x708.png">
                 </p>
-                <p  style="text-align: left;margin-left: 28px; width: 200px;">
+                <p  style="text-align: left;margin-left: 28px; width: 250px;">
                     Please fill in other requirement(if any)<br>
                     <textarea style="width: 349px; height: 114px;" name="fill_requirement" value="<?php echo val_field('fill_requirement');?>" TABINDEX=38></textarea>
 

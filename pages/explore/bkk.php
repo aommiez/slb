@@ -492,7 +492,7 @@
 		    Thai people smile to express gladness and happiness, to
             thank for small services, to return the Wai of children and
             inferior persons, and even to excuse small inconveniences.<br>
-			<strong>Donot!</strong><br>
+			<strong>Do not!</strong><br>
 			- Place your feet on the table while sitting.<br> 
 			- Use your foot to point things out or to touch any anyone, this is considered rude. <br>
 			- Touch a person's head, nor ruffle his/her hair. The head is
