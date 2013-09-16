@@ -57,7 +57,6 @@ text-shadow: none;
     </div>
     <div class="bar my-bar">December 3<span class="upper-text">rd</span>, 2013<span class="arrow-down" day="3"></span></div>
     <div class="picture-list" day="3">
-
         <?php foreach($days3 as $key => $picture){?>
             <div class="grid whos-thumb hide">
                 <p>

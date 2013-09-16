@@ -207,6 +207,15 @@
                 triggerH();
                 }
             });
+            $("#s12bt").bind('click',function(){
+                if ($("#s11").is(":visible")) {
+                    $("#s11").hide();
+                } else {
+                    $("#s11").show();
+                    $(this).hide();
+                    triggerH();
+                }
+            });
         });
     </script>
 
@@ -320,10 +329,10 @@
             <p style="margin-top: 10px;">
                 China Town
                 Yaowarat Road is home to
-                Bangkok’s China town<span id="s7">Yaowarat Road is home to Bangkok’s China town which is centered on Sam Pheng Lane. There are many small streets and alleys full of shops and vendors selling all types of goods. It has been the main center for trading by the Chinese community. Near by is the Phahurat or Indian market, and the area is bordered by the Chao Phraya River to the south. Yaowarat road is also well known for its sheer variety of food, and at night turns into a large “food street” that draws tourists and locals from all over the city.</span>
+                Bangkok’s China town<span id="s8">Yaowarat Road is home to Bangkok’s China town which is centered on Sam Pheng Lane. There are many small streets and alleys full of shops and vendors selling all types of goods. It has been the main center for trading by the Chinese community. Near by is the Phahurat or Indian market, and the area is bordered by the Chao Phraya River to the south. Yaowarat road is also well known for its sheer variety of food, and at night turns into a large “food street” that draws tourists and locals from all over the city.</span>
 
                 <br />
-                <a href="#adsad"id="s7bt">more »</a>
+                <a href="#adsad"id="s8bt">more »</a>
             </p>
         </div>
         </div>
@@ -340,9 +349,9 @@
             <p style="margin-top: 10px;">
                 Weekend market
                 Chatuchak weekend market
-                is one of the world’s largest..<span id="s8">weekend markets cover area of 27 Acres altogether divided into 27 sections, contains more than 15,000 booths selling goods from every part of Thailand.</span>
+                is one of the world’s largest..<span id="s9">weekend markets cover area of 27 Acres altogether divided into 27 sections, contains more than 15,000 booths selling goods from every part of Thailand.</span>
                 <br />
-                <a href="#adsad">more »</a>
+                <a href="#adsad" id="s9bt">more »</a>
             </p>
         </div>
         <div class="grid">
@@ -374,9 +383,9 @@
             </div>
             <p style="margin-top: 10px;">
                 CentralWorld
-                Thailand’s first lifestyle shopping complex where separates into <span id="s9">6 different shopping zones with creative ambience and myriad shopping experiences.</span>
+                Thailand’s first lifestyle shopping complex where separates into <span id="s10">6 different shopping zones with creative ambience and myriad shopping experiences.</span>
                 <br />
-                <a href="#adsad" id="s9bt">more »</a>
+                <a href="#adsad" id="s10bt">more »</a>
             </p>
         </div>
         <div class="clearfix"></div>
@@ -393,9 +402,9 @@
                 <div class="shadow-thumb"></div>
             </div>
             <p style="margin-top: 10px;">			
-			You can take any color of Taxi but always request to pay by meter charge. <span id="s10">Minimum fare is 35 Baht for the first 2 km. The fare increase by distance, from 2-20 km is approximately 5 Baht/ km. and 1.25 Baht per minute of waiting (at traffic jam or standby).</span>
+			You can take any color of Taxi but always request to pay by meter charge. <span id="s11">Minimum fare is 35 Baht for the first 2 km. The fare increase by distance, from 2-20 km is approximately 5 Baht/ km. and 1.25 Baht per minute of waiting (at traffic jam or standby).</span>
                 <br />
-                <a href="#adsad" id="s10bt">more »</a>
+                <a href="#adsad" id="s11bt">more »</a>
             </p>
         </div>
         <div class="grid">
@@ -404,9 +413,9 @@
                 <div class="shadow-thumb"></div>
             </div>
             <p style="margin-top: 10px;">
-			The fare depends on the destination that you have to negotiate with the driver. <span id="s11">Normally, it starts approximately 30 Baht in short trip. Please do not allow Tuk-Tuk to stop and any place that is not your destination. </span>
+			The fare depends on the destination that you have to negotiate with the driver. <span id="s12">Normally, it starts approximately 30 Baht in short trip. Please do not allow Tuk-Tuk to stop and any place that is not your destination. </span>
                 <br />
-                <a href="#adsad" id="s11bt">more »</a>
+                <a href="#adsad" id="s12bt">more »</a>
             </p>
         </div>
         <div class="grid">
