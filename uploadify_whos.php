@@ -13,7 +13,7 @@ $targetFolder = 'img_whos';
 try {
     $pdo->beginTransaction();
     if(!$pdo->query("INSERT INTO whos(type) VALUES('{$_POST['type']}')")){
-        //var_dump($pdo->errorInfo());
+        var_dump($pdo->errorInfo());
         throw new Exception('error');
     }
     $id = $pdo->lastInsertId();
@@ -32,6 +32,7 @@ try {
 
         $img = new abeautifulsite\SimpleImage($tempFile);
         $img->resize(172, 172)->save($targetFile);
+        chmod($targetFile, '0777');
 
         if(!$pdo->query("UPDATE whos SET path='{$file_name}' WHERE id='{$id}'")){
             //var_dump($pdo->errorInfo());
@@ -44,5 +45,6 @@ try {
     $pdo->commit();
 }
 catch (Exception $e) {
+    echo $e;
     $pdo->rollBack();
 }

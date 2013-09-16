@@ -7,4 +7,4 @@
  * To change this template use File | Settings | File Templates.
  */
 
-$pdo = new PDO('mysql:host=127.0.0.1;dbname=slb', 'root', '123456');
+$pdo = new PDO('mysql:host=127.0.0.1;dbname=slb', 'root', '');

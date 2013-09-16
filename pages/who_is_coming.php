@@ -53,7 +53,7 @@
             <img src="images/WhosComing/Executive350x243.png">
         </div>
         <div class="grid-content">
-            <a href="home.php?page=who_is_coming/executives">more »</a>
+            <a href="home.php?page=who_is_coming/whos&type=executives">more »</a>
         </div>
         <div class="grid-shadow"></div>
     </div>
@@ -62,7 +62,7 @@
             <img src="images/WhosComing/Participant350x243.png">
         </div>
         <div class="grid-content">
-            <a href="#">more »</a>
+            <a href="home.php?page=who_is_coming/whos&type=participants">more »</a>
         </div>
         <div class="grid-shadow"></div>
     </div>
@@ -71,7 +71,7 @@
             <img src="images/WhosComing/Interchange350x243.png">
         </div>
         <div class="grid-content">
-            <a href="#">more »</a>
+            <a href="home.php?page=who_is_coming/whos&type=interchange_team">more »</a>
         </div>
         <div class="grid-shadow"></div>
     </div>

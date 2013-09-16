@@ -8,6 +8,7 @@
  * @copyright	A Beautiful Site, LLC.
  */
 namespace	abeautifulsite;
+use Exception;
 /**
  * Class SimpleImage
  * This class makes image manipulation in PHP as simple as possible.
@@ -33,7 +34,6 @@ class SimpleImage {
 	 * 									(is used for creating image from scratch)
 	 *
 	 * @return SimpleImage
-	 * @throws Exception
 	 */
 	function __construct ($filename = null, $width = null, $height = null, $color = null) {
 		if ($filename) {

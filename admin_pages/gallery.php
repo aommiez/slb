@@ -9,8 +9,13 @@
 if($_SERVER['REQUEST_METHOD']=='POST'){
     try {
         foreach($_POST['del'] as $key=> $value){
-            if($value=='yes'){
-                if(!$pdo->query("DELETE FROM galleries WHERE id='{$key}'")){
+            if($value=='yes' && $result = $pdo->query("SELECT * FROM galleries WHERE id='{$key}' LIMIT 1")){
+                if($result->rowCount()==0)
+                    continue;
+                $item = $result->fetch();
+                @unlink('img_gallery/'.$item['path']);
+                @unlink('img_gallery/ori_'.$item['path']);
+                if(!$pdo->query("DELETE FROM galleries WHERE id='{$key}' LIMIT 1")){
                     throw new Exception('');
                 }
             }
@@ -90,11 +95,18 @@ $galleries = $pdo->query("SELECT * FROM galleries WHERE day='{$day}'")->fetchAll
 <script type="text/javascript">
 $(function() {
     $("#file_upload_1").uploadify({
+        //'debug'    : true,
+        //'preventCaching' : false,
         formData: { day: '<?php echo $day;?>' },
+        'script': 'uploadify_gallery.php',
         swf           : 'uploadify/uploadify.swf',
         uploader      : 'uploadify_gallery.php',
         'onQueueComplete' : function(queueData) {
+            //alert(queueData.uploadsSuccessful);
             window.location.reload();
+        },
+        'onUploadError' : function(file, errorCode, errorMsg, errorString) {
+            alert('The file ' + file.name + ' could not be uploaded: ' + errorString);
         }
     });
 

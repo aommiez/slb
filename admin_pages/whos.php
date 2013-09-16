@@ -15,7 +15,11 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         }
 
         foreach($_POST['del'] as $key=> $value){
-            if($value=='yes'){
+            if($value=='yes' && $result = $pdo->query("SELECT * FROM whos WHERE id='{$key}' LIMIT 1")){
+                if($result->rowCount()==0)
+                    continue;
+                $item = $result->fetch();
+                @unlink('img_whos/'.$item['path']);
                 if(!$pdo->query("DELETE FROM whos WHERE id='{$key}'")){
                     throw new Exception('');
                 }

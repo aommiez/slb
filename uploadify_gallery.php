@@ -28,10 +28,15 @@ try {
     if (in_array($fileParts['extension'], $fileTypes)) {
 
         $file_name = $id.'.'.$fileParts['extension'];
+        $file_name_ori = 'ori_'.$id.'.'.$fileParts['extension'];
         $targetFile = $targetPath.'/'.$file_name;
+        $targetFileOri = $targetPath.'/'.$file_name_ori;
 
         $img = new abeautifulsite\SimpleImage($tempFile);
-        $img->resize(182, 182)->save($targetFile);
+        $img->save($targetFileOri);
+        chmod($targetFileOri, '0777');
+        $img->resize(182,182)->save($targetFile);
+        chmod($targetFile, '0777');
 
         if(!$pdo->query("UPDATE galleries SET path='{$file_name}' WHERE id='{$id}'")){
             //var_dump($pdo->errorInfo());
