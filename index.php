@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
             width: 1280px;
             height: 229px;
-            background: url('foot.png');
+            background: url('css/foot.png');
             pointer-events: none;
         }
 
