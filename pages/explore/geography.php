@@ -52,34 +52,18 @@ p {
             the north and east; and the Mekong River and the Dongrak Mountains
             delineating the border of Cambodia to the east. 
         </p>
+
         <p style="text-indent:50px;">
-            Northeastern Thailand’s geography, where the kingdom borders Laos at
-            the Mekong River, features the Khorat Plateau, which extends south
-            towards the Thai border with Cambodia. The Isan region of Northeastern
-            Thailand is the most populous region of Thailand (with the exception of
-            Bangkok) and features a number of bustling provincial capital cities.
+            The geography of Thailand’s interior is dominated by the Central Plains, the “Rice Bowl of Asia,” through which the Chao Phraya River feeds expansive rice fields and then enters the bustling capital of Bangkok before spilling into the Gulf of Thailand.
+        </p>
+
+        <p style="text-indent: 50px">
+            Stretching down the Malaysian peninsula, the slender trunk of the figurative elephant separates the Andaman Sea from the Gulf of Thailand, providing Thailand with beaches and islands along opposing shores. Once, the sheltered coves of the narrow Isthmus of Kra were important ports along an ancient, strategic trading route; today the islands of Phuket and Koh Samui are equally important as tourist destinations, though both coasts also contain numerous historical attractions as well as national parks, wildlife sanctuaries, and spectacular forests, waterfalls, and beaches.
         </p>
         <p style="text-indent:50px;">
-            The geography of Thailand’s interior is dominated by the Central Plains,
-            the “Rice Bowl of Asia,” through which the Chao Phraya River feeds
-            expansive rice fields and then enters the bustling capital of Bangkok
-            before spilling into the Gulf of Thailand.
+            In addition to these natural, geographical regions, Thailand is divided into 76 political provinces, with Bangkok serving as the political, commercial, industrial, educational, and entertainment capital of the country.
         </p>
-        <p style="text-indent:50px;">
-            Stretching down the Malaysian peninsula, the slender trunk of the figurative
-            elephant separates the Andaman Sea from the Gulf of Thailand, providing
-            Thailand with beaches and islands along opposing shores.  Once, the
-            sheltered coves of the narrow Isthmus of Kra were important ports along
-            an ancient, strategic trading route; today the islands of Phuket and Koh
-            Samui are equally important as tourist destinations, though both coasts also
-            contain numerous historical attractions as well as national parks, wildlife
-            sanctuaries, and spectacular forests, waterfalls, and beaches.
-        </p>
-        <p style="text-indent:50px;">
-            In addition to these natural, geographical regions, Thailand is divided into
-            76 political provinces, with Bangkok serving as the political, commercial,
-            industrial, educational, and entertainment capital of the country.
-        </p>
+
     </div>
 
     <div class="clearfix"></div>

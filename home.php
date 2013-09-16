@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('pdo.php');
+//include('pdo.php');
 /*
 if ($_SESSION['login'] != 1 ) {
     echo '<script type="text/javascript">window.location.href="index.php"</script>';

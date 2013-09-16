@@ -40,20 +40,11 @@
             <!-- As visitors to Thailand also include many Europeans and other Asians,
             Thai people's language skills often also include these other languages to
             varying degrees.  -->
-            The Thai language itself is challenging to master, but
-            Thai people are happy to help foreigners learn a few words to help them
-            get around.  However, English is typically the common currency for cross
-            -cultural conversation as Thailand hosts visitors from around the world.
+            The Thai language itself is challenging to master, but Thai people are happy to help foreigners learn a few words to help them get around. However, English is typically the common currency for cross-cultural conversation as Thailand hosts visitors from around the world.
+            That said, visitors may experience difficulty picking up the Thai language as it is considerably different from many foreign languages. The Thai language features five tones: high, mid, low, rising, and falling, each of which changes the meaning of particular ‘words’. Visitors unfamiliar with tonal languages often have difficulty pronouncing even the most basic terms when learning to speak Thai, but with some practice visitors find that Thai people enjoy helping them with their pronunciation of the Thai language.
 
         </p>
-        <p style="text-indent:50px;">That said, visitors may experience difficulty picking up the Thai language
-            as it is considerably different from many foreign languages.  The Thai
-            language features five tones: high, mid, low, rising, and falling, each of
-            which changes the meaning of particular ‘words’.  Visitors unfamiliar with
-            tonal languages often have difficulty pronouncing even the most basic
-            terms when learning to speak Thai, but with some practice visitors find
-            that Thai people enjoy helping them with their pronunciation of the Thai
-            language.</p>
+
     </div>
     <!--
     <div class="section-div" style="text-indent:50px;">

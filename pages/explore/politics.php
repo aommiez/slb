@@ -17,11 +17,7 @@ p {
 
     <div class="section-div">
         <img class="pull-right" src="images/Politics/Image1_209x252.png" style="margin-left: 20px;">
-        <p style="text-indent:50px;">Thailand has existed as a modern nation-state since the founding of the Chakri
-        Dynasty and the establishment of Bangkok as its capital in 1782.  In 1932, a
-        ‘revolution’ absolved the absolute rule of the monarchy and established a
-        Constitutional Monarchy, removing the political authority of the crown and
-        founding a nascent ‘democracy’.  </p>
+        <p style="text-indent:50px;">Thailand has existed as a modern nation-state since the founding of the Chakri Dynasty and the establishment of Bangkok as its capital in 1782. In 1932, a ‘revolution’ absolved the absolute rule of the monarchy and established a Constitutional Monarchy, removing the political authority of the crown and founding a nascent ‘democracy’.   </p>
 
         <p style="text-indent:50px;">In 1946, direct elections were finally held in which the people of Thailand voted
         for members of a bicameral legislature (Senate and House of Representatives)
@@ -76,31 +72,15 @@ p {
 
     <div class="section-div">
         <p style="padding-bottom: 20px;" class="pull-left" ><img style="margin-right: 20px;" src="images/Politics/Image379x252.png"></p>
-        <p style="text-indent:50px;">While the King of Thailand has little direct power, under the constitution King
-            Bhumibol is a symbol of national identity and unity; indeed, the Thai King commands
-            enormous popular respect and moral authority, both of which he has leveraged on a
-            few rare occasions to resolve political crises that have threatened national stability. 
-            In more recent years however, he has maintained a more hands-off approach,
-            urging Thais to learn to resolve their differences in an amicable way for the good of
-            their country.
+        <p style="text-indent:50px;">While the King of Thailand has little direct power, under the constitution King Bhumibol is a symbol of national identity and unity; indeed, the Thai King commands enormous popular respect and moral authority, both of which he has leveraged on a few rare occasions to resolve political crises that have threatened national stability.
 
 
         </p>
-        <p style="text-indent:50px;">The Thai King and the members of the Royal Family are deeply revered by the Thai
-            people for the Royal Family’s passionate commitment to the welfare its people.  In
-            Thailand, respect for the Royal Family goes beyond mere custom however, it is
-            safeguarded by law: it is not only socially unacceptable to disparage members of the
-            Royal Family or their likenesses; it is punishable under lese majeste law. Furthermore,
-            it is required to stand in respect to the King at the commencement of films and to stop
-            walking and/or stand during the playing of the national anthem at 8 am and 6 pm. 
-            On the lighter side, it has become fashionable to pay respect to the king by wearing
-            a yellow shirt on Monday’s since the 60th anniversary of the king’s reign in 2006.
+        <p style="text-indent:50px;">In Thailand, respect for the Royal Family goes beyond mere custom however, it is safeguarded by law: it is not only socially unacceptable to disparage members of the Royal Family or their likenesses; it is punishable under lese majesty law. Furthermore, it is required to stand in respect to the King at the commencement of films and to stop walking and/or stand during the playing of the national anthem at 8 am and 6 pm. On the lighter side, it has become fashionable to pay respect to the king by wearing a yellow shirt on Monday’s since the 60th anniversary of the king’s reign in 2006. 
              </p>
 
-            <p style="text-indent:50px;">While both the King’s official residence, the Grand Palace, and his traditional
-            residence, Chitralada Palace, are located in Bangkok (where the King has instituted
-            an agricultural research center), the King and Queen are typically found at Klai
-            Kangwon Villa in the seaside town of Hua Hin.</p>
+            <p style="text-indent:50px;">While both the King’s official residence, the Grand Palace, and his traditional residence, Chitralada Palace, are located in Bangkok (where the King has instituted an agricultural research center), the King and Queen are typically found at Klai Kangwon Villa in the seaside town of Hua Hin.
+            </p>
 
         <div class="clearfix"></div>
     </div>
