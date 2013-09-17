@@ -24,6 +24,7 @@ try {
 // Validate the file type
     $fileTypes = array('jpg','jpeg','gif','png'); // File extensions
     $fileParts = pathinfo($_FILES['Filedata']['name']);
+    $fileParts['extension'] = strtolower($fileParts['extension']);
 
     if (in_array($fileParts['extension'], $fileTypes)) {
 
