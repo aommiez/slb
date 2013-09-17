@@ -12,14 +12,13 @@ $whos = $result->fetchAll(PDO::FETCH_ASSOC);
     margin: 22px 0 0 22px;
     text-align: center;
 }
-.grid:nth-child(4n-3) {
-    margin-left: 0;
+.whos-all {
+    margin-left: -22px;
 }
 .whos-thumb {
     background: url('images/WhosComing_Executives/whos_191x177.png') no-repeat;
     width: 177px;
     padding: 2px;
-    min-height: 246px;
     box-sizing: border-box;
 }
 
@@ -46,13 +45,17 @@ $whos = $result->fetchAll(PDO::FETCH_ASSOC);
         ?>
         <img src="img/rightLine.png">
     </p>
-    <div>
+    <div class="whos-all">
         <?php foreach($whos as $key => $who){?>
+            <?php if($key%4==0){?>
+                <div class="clearfix"></div>
+            <?php }?>
         <div class="grid whos-thumb">
             <p><img src="img_whos/<?php echo $who['path'];?>"></p>
             <p><b><?php echo $who['title'];?></b></p>
-            <p title="<?php echo $who['description'];?>"><?php
-                echo strlen($who['description'])>20? substr($who['description'], 0, 20)."...": $who['description'];
+            <p><?php
+                //echo strlen($who['description'])>20? substr($who['description'], 0, 20)."...": $who['description'];
+                echo $who['description'];
             ?></p>
         </div>
         <?php }?>
