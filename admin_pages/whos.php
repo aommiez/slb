@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
         echo <<<HTML
 <script type="text/javascript">
-window.location.reload();
+parent.window.location.reload(true);
 </script>
 HTML;
 
