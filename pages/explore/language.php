@@ -1,4 +1,3 @@
-
 <style type="text/css">
 .section-div {
     margin-top: 22px;
@@ -137,7 +136,12 @@
                 <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-11.wav');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
         </table>
+        <div style="width: 100%; text-align: left;margin-top: 20px;font-size: 12px;">
+            <a href="http://windows.microsoft.com/en-us/windows/download-windows-media-player" target="_blank">Download windows media player</a>
+        </div>
+
     </div>
+
 </div>
 
 <div class="clearfix"></div>
