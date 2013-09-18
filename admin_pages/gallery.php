@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
         echo <<<HTML
 <script type="text/javascript">
-parent.window.location.reload(true);
+parent.window.location.href="{$_SERVER['PHP_SELF']}";
 </script>
 HTML;
 
