@@ -6,7 +6,7 @@ $days5 = $pdo->query("SELECT * FROM galleries WHERE day='5'")->fetchAll(PDO::FET
 ?>
 <style type="text/css">
 .picture-list {
-    padding-bottom: 20px;
+    margin-left: -22px;
 }
 .grid {
 width: 177px;
@@ -39,6 +39,10 @@ text-shadow: none;
 
 .arrow-down {
     cursor: pointer;
+}
+
+.my-bar {
+    margin-top: 20px;
 }
 </style>
 <div>
@@ -108,22 +112,26 @@ $(function(){
         var list = $('.picture-list[day="'+day+'"]');
 
         var el = list.find('.whos-thumb:visible').first();
-        for(var i=0;i<8;i++){
-            if(el.size()==0)
-                el = list.find('.whos-thumb:last');
-            else
-                el = el.prev();
+        if(el.size()==0)
+            el = list.find('.whos-thumb:last');
+        else
+            el = el.prev();
 
+        for(var i=0;i<8;i++){
             if(el.size()==0){
                 setUpfancy(list);
             } else {
-                el.show();
+                el.slideDown();
             }
-
+            el = el.prev();
         }
 
-        setUpmarginLeft(list);
         setUpfancy(list);
+
+        if(el.size()==0){
+            $(this).unbind('click');
+            $(this).click(toggleShow);
+        }
     }).click();
 
     function setUpfancy(context)
@@ -136,17 +144,12 @@ $(function(){
         });
     }
 
-    function setUpmarginLeft(context)
+    function toggleShow(e)
     {
-        var el = context.find('.whos-thumb:visible').removeClass('fl').first();
-        var i=0;
-        while(el.size()!=0){
-            i++;
-            if(i%4==1){
-                el.addClass('fl');
-            }
-            el = el.next();
-        }
+        e.preventDefault();
+        var day = $(this).attr('day');
+        var list = $('.picture-list[day="'+day+'"]');
+        list.slideToggle();
     }
 
     setUpfancy();
