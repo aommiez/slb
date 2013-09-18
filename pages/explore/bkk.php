@@ -83,6 +83,9 @@
 #s11 {
     display: none;
 }
+#s12 {
+    display: none;
+}
 </style>
 <div>
     <div class="section-bkk">
@@ -208,10 +211,10 @@
                 }
             });
             $("#s12bt").bind('click',function(){
-                if ($("#s11").is(":visible")) {
-                    $("#s11").hide();
+                if ($("#s12").is(":visible")) {
+                    $("#s12").hide();
                 } else {
-                    $("#s11").show();
+                    $("#s12").show();
                     $(this).hide();
                     triggerH();
                 }

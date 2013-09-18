@@ -69,43 +69,43 @@
                     Good evening / Goodbye"</td>
                 <td>Sawasdee Krab</td>
                 <td>Sawasdee Ka</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-01.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-01.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
             <tr>
                 <td>Nice to meet you</td>
                 <td>Yindee Tee Dai Ruejak Krab</td>
                 <td>Yindee Tee Dai Ruejak Ka</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-02.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-02.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
             <tr>
                 <td>How are you doing ?</td>
                 <td>Sabai Dee Rue Krab</td>
                 <td>Sabai Dee Rue Ka</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-03.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-03.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
             <tr>
                 <td>I’m fine</td>
                 <td>Sabai Dee Krab</td>
                 <td>Sabai Dee Ka</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-04.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-04.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
             <tr>
                 <td>I’m not fine</td>
                 <td>Mai Koi Sabai Krab</td>
                 <td>Mai Koi Sabai Ka</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-05.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-05.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
             <tr>
                 <td>How about you ?</td>
                 <td>Khun La Krab</td>
                 <td>Khun La Ka</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-06.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-06.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
             <tr>
                 <td>My name is …</td>
                 <td>Pom Chue … (John) … Krab</td>
                 <td>Dichan Chue … (Jane) … Ka</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-07.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-07.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
             <tr>
                 <td>Excuse me, can I have your
@@ -115,25 +115,25 @@
                 </td>
                 <td>"Khor Thoat KaKhun Chue
                     Arai Ka"</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-08.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-08.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
             <tr>
                 <td>Excuse me / I’m sorry</td>
                 <td>Kor Thoat Krab</td>
                 <td>Kor Thoat Ka</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-09.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-09.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
             <tr>
                 <td>Thank you</td>
                 <td>Kop Khun Krab</td>
                 <td>Kop Khun Ka</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-10.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-10.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
             <tr>
                 <td>Good Luck</td>
                 <td>Chok Dee Krab</td>
                 <td>Chok Dee Ka</td>
-                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-11.wav');"><img src="images/Language/Liten19x93.png"></a></td>
+                <td><a href="#asdasd" onclick="Sound.playSound('sound/sound-11.mp3');"><img src="images/Language/Liten19x93.png"></a></td>
             </tr>
         </table>
         <div style="width: 100%; text-align: left;margin-top: 20px;font-size: 12px;">
